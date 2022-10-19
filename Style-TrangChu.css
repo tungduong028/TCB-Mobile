@@ -1,0 +1,158 @@
+html{
+    font-size: 5px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    height: 3000px;
+}
+#wrapper{
+    max-width: 100%;
+    margin: 0;
+    padding:0;
+    font-size: 15px;
+}
+@media all and (min-width: 11px){
+#header{
+    margin:0;
+    padding:0;
+    width: 100%;
+    background-color: #0B0C10;
+    display: block;
+    position: fixed;
+    z-index:1000;
+}
+.header-top{
+    width:100%;
+    display: flex;
+}
+.none{
+    display: none;
+}
+.logo{
+    width: 8em;
+    height: 6em;
+    margin: 0 10%;
+}
+.search-box{
+    width: 29.7em;
+    height: 2.8em;
+    margin: auto;
+    background-color: #fff;
+    display:flex;
+    border-radius: 1em;
+}
+.search-box .search-text{
+    width: 24em;
+    height: 2.65em;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    outline: none;
+    padding: 1em;
+    font-size: 16px;
+}
+.search-box .search-button{
+    width: 5em;
+    height: 3.2em;
+    border: none;
+    background-color: #c89979;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+}
+.header-righttop{
+    margin: auto 10%;
+    height: auto;
+    display: block;
+}
+.header-righttop a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.user{
+    margin-bottom: 1em;
+}
+#header-bot{
+    height: 5em;
+    width: 100%;
+}
+.menu{
+    width: 100%;
+    background-color: #0B0C10;
+}
+.menu ul{
+    width: 80%;
+    margin:0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu ul li{
+    font-size: 18px;
+    text-align: center;
+    width: 8em;
+    padding: 1em 0;
+    position: relative;
+    z-index: 5;
+}
+.menu ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.menu li:hover {
+    background-color:dimgray;
+    text-decoration: underline;
+}
+.menu .sub-menu {
+    position: absolute;
+    top: 3em;
+    display: none;
+}
+.menu .sub-menu li{
+    background-color: #0B0C10;
+}
+.menu .sub-menu li:hover {
+    background-color: dimgray;
+}
+.menu li:hover .sub-menu {
+    display: block;
+}
+.main{
+    margin:0 auto;
+    padding:0;
+    width: 100%;
+}
+.slide{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 10em;
+}
+.chuyen-slide{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-slide img{
+    width: 75em;
+    float: left;
+}
+.dieu-huong{
+    position: absolute;
+    top: 20em;
+    color:#fff;
+    width:100%;
+}
+.dieu-huong i{
+    font-size: 3em;
+    cursor: pointer;
+}
+.next{
+    float: right;
+}
+}
