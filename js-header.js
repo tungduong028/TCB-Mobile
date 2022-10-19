@@ -24,8 +24,8 @@ $(document).ready(function(){
 //slide
 var kichthuoc = document.getElementsByClassName("slide")[0].clientWidth;
 var chuyenslide = document.getElementsByClassName("chuyen-slide")[0];
-
-var max = 4500 - kichthuoc;
+var slid = document.getElementsByClassName("sli").length;
+var max = slid*kichthuoc - kichthuoc;
 var chuyen = 0;
 function next(){
   if(chuyen < max) chuyen += kichthuoc;
@@ -39,7 +39,22 @@ function prev(){
 }
 setInterval(next,2500);
 
-
+//slide-content
+var Ckichthuoc = document.getElementsByClassName("ktcontent")[0].clientWidth;
+var chuyencontent = document.getElementsByClassName("chuyen-content")[0];
+var Cslid = document.getElementsByClassName("c-sli").length;
+var Cmax = Cslid*Ckichthuoc - 4*Ckichthuoc;
+var chuyenC = 0;
+function Cnext(){
+  if(chuyenC < Cmax) chuyenC += Ckichthuoc;
+  else chuyenC = 0;
+  chuyencontent.style.marginLeft = '-' + chuyenC + 'px';
+}
+function Cprev(){
+  if(chuyenC == 0) chuyenC = Cmax;
+  else chuyenC -= Ckichthuoc;
+  chuyencontent.style.marginLeft = '-' + chuyenC + 'px';
+}
 
 
 

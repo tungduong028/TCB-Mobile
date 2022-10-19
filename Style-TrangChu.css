@@ -9,6 +9,9 @@ body{
     font-size: 15px;
     
 }
+a{
+    text-decoration: none;
+}
 #wrapper{
     max-width: 100%;
     margin: 0;
@@ -155,6 +158,52 @@ body{
     cursor: pointer;
 }
 .next{
+    float: right;
+}
+.content{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 12em;
+    border: 1px solid black;
+    padding: 0.5em 0;
+}
+.chuyen-content{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-content ul{
+    list-style-type: none;
+}
+.chuyen-content ul li{
+    float: left;
+    width: 15em;
+    margin: 0 3em 0 -1em;
+    border: 1px solid black;
+}
+.info{
+    padding: 0.5em;
+    border-top: 1px solid black;
+}
+.chuyen-content ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content .c-sli{
+    width: 15em;
+    padding: 0.2em 0;
+}
+.c-dieuhuong{
+    position:absolute;
+    top: 9em;
+    width:100%;
+}
+.c-dieuhuong i{
+    font-size: 2em;
+    cursor: pointer;
+}
+.c-next{
     float: right;
 }
 .footer{
