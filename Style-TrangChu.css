@@ -145,6 +145,7 @@ a{
 }
 .chuyen-slide img{
     width: 75em;
+    height: 30em;
     float: left;
 }
 .dieu-huong{
@@ -185,6 +186,7 @@ a{
 .info{
     padding: 0.5em;
     border-top: 1px solid black;
+    box-sizing: border-box;
 }
 .chuyen-content ul li a{
     text-transform: uppercase;
