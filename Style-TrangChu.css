@@ -7,7 +7,6 @@ body{
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
-    
 }
 a{
     text-decoration: none;
@@ -17,9 +16,9 @@ a{
     margin: 0;
     padding:0;
     font-size: 15px;
-    height: 3000px;
+    height: 3600px;
 }
-@media all and (min-width: 11px){
+@media all and (min-width: 1025px){
 #header{
     margin:0;
     padding:0;
@@ -28,6 +27,9 @@ a{
     display: block;
     position: fixed;
     z-index:1000;
+}
+.nut_dropdown{
+    display: none;
 }
 .header-top{
     width:100%;
@@ -65,6 +67,12 @@ a{
     background-color: #c89979;
     border-radius: 0 1em 1em 0;
     cursor: pointer;
+}
+.inmenu{
+    display:none;
+}
+.danhmuc{
+    display:none;
 }
 .header-righttop{
     margin: auto 10%;
@@ -130,14 +138,15 @@ a{
     margin:0 auto;
     padding:0;
     width: 100%;
-    height: 3150px;
+    height: 3600px;
 }
 .slide{
     width: 75em;
     margin:0 auto;
     overflow: hidden;
     position: relative;
-    top: 10em;
+    top: 12em;
+    border-radius: 1em;
 }
 .chuyen-slide{
     width: 750em;
@@ -145,12 +154,12 @@ a{
 }
 .chuyen-slide img{
     width: 75em;
-    height: 30em;
+    height: 35em;
     float: left;
 }
 .dieu-huong{
     position: absolute;
-    top: 14em;
+    top: 15em;
     color:#fff;
     width:100%;
 }
@@ -161,44 +170,92 @@ a{
 .next{
     float: right;
 }
-.content{
+.titlecont{
+    border: 1px solid black;
+    width: 15em;
+    text-align: center;
+    margin: 0 auto;
+    position:relative;
+    top: 15em;
+    font-size: 1.2em;
+    padding: 0.3em;
+    background-color: #0B0C10;
+    color:#fff;
+    border-radius: 1em;
+    text-transform: uppercase;
+}
+.tit01{
+    position:relative;
+    top: 15em;
+}
+.tit02{
+    position: relative;
+    top: 22em;
+}
+.tit03{
+    position:relative;
+    top: 30em;
+}
+.tit04{
+    position:relative;
+    top: 38em;
+}
+.tit05{
+    position:relative;
+    top: 46em;
+}
+.content-01{
     width: 75em;
     margin:0 auto;
     overflow: hidden;
     position: relative;
-    top: 12em;
+    top: 20em;
     border: 1px solid black;
-    padding: 0.5em 0;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
 }
-.chuyen-content{
+.chuyen-content-01{
     width: 750em;
     transition: all 0.5s;
 }
-.chuyen-content ul{
+.chuyen-content-01 ul{
     list-style-type: none;
+    margin:0;
+    padding: 0 3em;
 }
-.chuyen-content ul li{
+.chuyen-content-01 ul li{
     float: left;
     width: 15em;
     margin: 0 3em 0 -1em;
     border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.chuyen-content-01 ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content-01 .C01-sli{
+    width: 15em;
+    padding: 0.2em 0;
 }
 .info{
     padding: 0.5em;
     border-top: 1px solid black;
     box-sizing: border-box;
+    overflow:hidden;
 }
-.chuyen-content ul li a{
-    text-transform: uppercase;
-    color:black;
+.info .name-info{
+    height: 4em;
+    overflow:hidden;
 }
-.chuyen-content .c-sli{
-    width: 15em;
-    padding: 0.2em 0;
+.cost{
+    font-weight: bold;
 }
 .c-dieuhuong{
     position:absolute;
-    top: 9em;
+    top: 10em;
     width:100%;
 }
 .c-dieuhuong i{
@@ -208,13 +265,157 @@ a{
 .c-next{
     float: right;
 }
+.content-02{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 29em;
+    border: 1px solid black;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
+}
+.chuyen-content-02{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-content-02 ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0 3em;
+}
+.chuyen-content-02 ul li{
+    float: left;
+    width: 15em;
+    margin: 0 3em 0 -1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.chuyen-content-02 ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content-02 .C02-sli{
+    width: 15em;
+    padding: 0.2em 0;
+}
+.content-03{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 39em;
+    border: 1px solid black;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
+}
+.chuyen-content-03{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-content-03 ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0 3em;
+}
+.chuyen-content-03 ul li{
+    float: left;
+    width: 15em;
+    margin: 0 3em 0 -1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.chuyen-content-03 ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content-03 .C03-sli{
+    width: 15em;
+    padding: 0.2em 0;
+}
+.content-04{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 48em;
+    border: 1px solid black;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
+}
+.chuyen-content-04{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-content-04 ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0 3em;
+}
+.chuyen-content-04 ul li{
+    float: left;
+    width: 15em;
+    margin: 0 3em 0 -1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.chuyen-content-04 ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content-04 .C04-sli{
+    width: 15em;
+    padding: 0.2em 0;
+}
+.content-05{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 58em;
+    border: 1px solid black;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
+}
+.chuyen-content-05{
+    width: 750em;
+    transition: all 0.5s;
+}
+.chuyen-content-05 ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0 3em;
+}
+.chuyen-content-05 ul li{
+    float: left;
+    width: 15em;
+    margin: 0 3em 0 -1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.chuyen-content-05 ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.chuyen-content-05 .C05-sli{
+    width: 15em;
+    padding: 0.2em 0;
+}
 .footer{
     width: 100%;
     background-color:#0B0C10;
 }
 .mail{
     width: 100%;
-    height: auto;
+    height: 9em;
     display: block;
     margin: 0;
     padding: 1em 0;
@@ -274,4 +475,501 @@ a{
     text-decoration: none;
     color: #fff;
 }
+.tit-tt{
+    text-transform: uppercase;
+
+}
+}
+@media all and (max-width: 500px){
+    #header{
+        margin:0;
+        padding:0;
+        width: 100%;
+        background-color: #0B0C10;
+        display: block;
+        z-index:1000;
+    }
+    .header-top{
+        width:100%;
+        position:relative;
+        display:none;
+    }
+    .none{
+        display: none;
+    }
+    .logo{
+        width: 6em;
+        height: 4em;
+        margin: 0 10%;
+    }
+    .search-box{
+        width: 29.7em;
+        height: 2.8em;
+        margin: auto;
+        background-color: #fff;
+        display:flex;
+        border-radius: 1em;
+    }
+    .search-box .search-text{
+        width: 24em;
+        height: 2.65em;
+        border: none;
+        border-radius: 1em 0 0 1em;
+        outline: none;
+        padding: 1em;
+        font-size: 16px;
+    }
+    .search-box .search-button{
+        width: 5em;
+        height: 3.2em;
+        border: none;
+        background-color: #c89979;
+        border-radius: 0 1em 1em 0;
+        cursor: pointer;
+    }
+    .header-righttop{
+        margin: auto 10%;
+        height: auto;
+        display: flex;
+        float: right;
+        position:absolute;
+        top: 1em;
+        right: 0;
+    }
+    .header-righttop a{
+        color:#fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .user{
+        margin-bottom: 1em;
+    }
+    #header-bot{
+        height: 5em;
+        width: 100%;
+        display:block;
+    }
+    .hienThi{
+        display: block !important;
+    }
+    .danhmuc{
+        z-index: 100;
+        font-size: 2em;
+        color:#fff;
+        padding:0;
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        box-sizing: border-box;
+        position:fixed;
+        background-color: #0B0C10;
+    }
+    .danhmuc-mid{
+        margin: 1.5em 0;
+        padding:0;
+        font-size: 15px;
+        display:flex;
+    }
+    .danhmuc-mid a{
+        color:#fff;
+        margin: 0.5em;
+    }
+    .danhmuc img{
+        width: 4em;
+        height:2em;
+        margin:0;
+    }
+    .icon-bars{
+        margin: 0.5em;
+    }
+    .menu{
+        width: 100%;
+        height: 60em;
+        background-color: #0B0C10;
+        display: none;
+    }
+    .inmenu{
+        position:relative;
+        top:5em;
+    }
+    .menu ul{
+        width: 100%;
+        margin:0 auto;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        position:relative;
+        top:5em;
+    }
+    .menu ul li{
+        margin:0 auto;
+        font-size: 15px;
+        text-align: center;
+        width: 8em;
+        padding: 1em 0;
+        z-index: 5;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color:#c89979;
+    }
+    .menu .sub-menu {
+        position: relative;
+        top:1em;
+        display: block;
+    }
+    .menu .sub-menu li{
+        display: block;
+        height: 1.5em;
+    }
+    .menu .sub-menu li a{
+        color:#fff;
+    }
+
+    .main{
+        margin:0 auto;
+        padding:0;
+        width: 100%;
+        height: 3600px;
+    }
+    .slide{
+        width: 25em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 6em;
+        border-radius: 1em;
+    }
+    .chuyen-slide{
+        width: 700em;
+        transition: all 0.5s;
+    }
+    .chuyen-slide img{
+        width: 25em;
+        height: 10em;
+        float: left;
+    }
+    .dieu-huong{
+        position: absolute;
+        top: 4em;
+        color:#fff;
+        width:100%;
+    }
+    .dieu-huong i{
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .next{
+        float: right;
+    }
+    .titlecont{
+        border: 1px solid black;
+        width: 15em;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.2em;
+        padding: 0.3em;
+        background-color: #0B0C10;
+        color:#fff;
+        border-radius: 1em;
+        text-transform: uppercase;
+    }
+    .tit01{
+        position:relative;
+        top: 8em;
+    }
+    .tit02{
+        position: relative;
+        top: 22em;
+    }
+    .tit03{
+        position:relative;
+        top: 30em;
+    }
+    .tit04{
+        position:relative;
+        top: 38em;
+    }
+    .tit05{
+        position:relative;
+        top: 46em;
+    }
+    .content-01{
+        width: 25em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 12em;
+        border: 1px solid black;
+        padding: 1.5em 0;
+        border-radius: 1em;
+        box-shadow: 0.2em 0.2em dimgray;
+    }
+    .chuyen-content-01{
+        width: 750em;
+        transition: all 0.5s;
+    }
+    .chuyen-content-01 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0 3em;
+    }
+    .chuyen-content-01 ul li{
+        float: left;
+        width: 15em;
+        margin: 0 3em 0 -1em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+    }
+    .chuyen-content-01 ul li a{
+        text-transform: uppercase;
+        color:black;
+    }
+    .chuyen-content-01 .C01-sli{
+        width: 15em;
+        padding: 0.2em 0;
+    }
+    .info{
+        padding: 0.5em;
+        border-top: 1px solid black;
+        box-sizing: border-box;
+        overflow:hidden;
+    }
+    .info .name-info{
+        height: 4em;
+        overflow:hidden;
+    }
+    .cost{
+        font-weight: bold;
+    }
+    .c-dieuhuong{
+        position:absolute;
+        top: 10em;
+        width:100%;
+    }
+    .c-dieuhuong i{
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .c-next{
+        float: right;
+    }
+    .content-02{
+        width: 25em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 29em;
+        border: 1px solid black;
+        padding: 1.5em 0;
+        border-radius: 1em;
+        box-shadow: 0.2em 0.2em dimgray;
+    }
+    .chuyen-content-02{
+        width: 750em;
+        transition: all 0.5s;
+    }
+    .chuyen-content-02 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0 3em;
+    }
+    .chuyen-content-02 ul li{
+        float: left;
+        width: 15em;
+        margin: 0 3em 0 -1em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+    }
+    .chuyen-content-02 ul li a{
+        text-transform: uppercase;
+        color:black;
+    }
+    .chuyen-content-02 .C02-sli{
+        width: 15em;
+        padding: 0.2em 0;
+    }
+    .content-03{
+        width: 75em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 39em;
+        border: 1px solid black;
+        padding: 1.5em 0;
+        border-radius: 1em;
+        box-shadow: 0.2em 0.2em dimgray;
+    }
+    .chuyen-content-03{
+        width: 750em;
+        transition: all 0.5s;
+    }
+    .chuyen-content-03 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0 3em;
+    }
+    .chuyen-content-03 ul li{
+        float: left;
+        width: 15em;
+        margin: 0 3em 0 -1em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+    }
+    .chuyen-content-03 ul li a{
+        text-transform: uppercase;
+        color:black;
+    }
+    .chuyen-content-03 .C03-sli{
+        width: 15em;
+        padding: 0.2em 0;
+    }
+    .content-04{
+        width: 75em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 48em;
+        border: 1px solid black;
+        padding: 1.5em 0;
+        border-radius: 1em;
+        box-shadow: 0.2em 0.2em dimgray;
+    }
+    .chuyen-content-04{
+        width: 750em;
+        transition: all 0.5s;
+    }
+    .chuyen-content-04 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0 3em;
+    }
+    .chuyen-content-04 ul li{
+        float: left;
+        width: 15em;
+        margin: 0 3em 0 -1em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+    }
+    .chuyen-content-04 ul li a{
+        text-transform: uppercase;
+        color:black;
+    }
+    .chuyen-content-04 .C04-sli{
+        width: 15em;
+        padding: 0.2em 0;
+    }
+    .content-05{
+        width: 75em;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 58em;
+        border: 1px solid black;
+        padding: 1.5em 0;
+        border-radius: 1em;
+        box-shadow: 0.2em 0.2em dimgray;
+    }
+    .chuyen-content-05{
+        width: 750em;
+        transition: all 0.5s;
+    }
+    .chuyen-content-05 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0 3em;
+    }
+    .chuyen-content-05 ul li{
+        float: left;
+        width: 15em;
+        margin: 0 3em 0 -1em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+    }
+    .chuyen-content-05 ul li a{
+        text-transform: uppercase;
+        color:black;
+    }
+    .chuyen-content-05 .C05-sli{
+        width: 15em;
+        padding: 0.2em 0;
+    }
+    .footer{
+        width: 100%;
+        background-color:#0B0C10;
+    }
+    .mail{
+        width: 100%;
+        height: 9em;
+        display: block;
+        margin: 0;
+        padding: 1em 0;
+    }
+    .mail-box {
+        width: 29.7em;
+        height: 2.8em;
+        background-color: #fff;
+        display: flex;
+        border-radius: 1em;
+        margin: 0 auto;
+    }
+    .mail-text{
+        width: 24em;
+        height: 2.65em;
+        border: none;
+        border-radius: 1em 0 0 1em;
+        outline: none;
+        padding: 1em;
+        font-size: 16px;
+    }
+    .mail-button{
+        width: 5em;
+        height: 3.2em;
+        border: none;
+        background-color: #c89979;
+        border-radius: 0 1em 1em 0;
+        cursor: pointer;
+    }
+    .txt-mail{
+        width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        box-sizing: border-box;
+        color: #fff;
+    }
+    .thong-tin{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        border-top: solid 2px #fff;
+    }
+    .thong-tin ul{
+        color:#fff;
+        width:30%;
+        list-style-type: none;
+    }
+    .thong-tin ul li{
+        margin: 1em;
+    }
+    .thong-tin ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .tit-tt{
+        text-transform: uppercase;
+    
+    }
 }
