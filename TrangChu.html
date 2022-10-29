@@ -1,51 +1,48 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"/>
 
-        <link rel="stylesheet" href="Style-TrangChu.css">
-        <title>TCB mobile</title>
-    </head>
-    <body>
-    <div id="wrapper">
-      <div id="header">
-        <div class="header-top">
-            <img src="images/Logo/LOGO-TCB.png" class="logo">
-            <form action="" class="search-box">
-              <input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
-              <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div class="header-righttop">
-              <div class="user"><a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a></div>
-              <div class="shopping"><a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></div>
-            </div>
-            </div>
-        <div class="header-bot">
-            <div onclick="hamDropdown()" class="danhmuc">
-              <img src="images/Logo/LOGO-TCB.png" class="logo">
-              <div class="danhmuc-mid">
-                <div class="user2"><a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a></div>
-                <div class="shopping2"><a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></div>
-              </div>
-              <div class="icon-bars"><i class="fa-solid fa-bars"></i></div>
-            </div>
-          <div class="menu">
-            <form action="" class="search-box inmenu">
-              <input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
-              <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <ul>
-              <li><a href="#">Điện thoại</a>
-            <ul class="sub-menu sub01">
-              <li><a href="#">Iphone</a></li>
-              <li><a href="#">Samsung</a></li>
-              <li><a href="#">Xiaomi</a></li>
-              <li><a href="#">Oppo</a></li>
-              <li><a href="#">Realme</a></li>
-            </ul>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+  <link rel="stylesheet" href="Style-TrangChu.css">
+  <title>TCB mobile</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="header-top">
+        <img src="images/Logo/LOGO-TCB.png" class="logo">
+        <form action="" class="search-box">
+          <input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
+          <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="login-cart">
+          <a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+        </div>
+      </div>
+      <div class="header-bot">
+        <div onclick="hamDropdown()" class="menu-bars">
+          <img src="images/Logo/LOGO-TCB.png" class="logo">
+          <div class="icon-bars"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="menu">
+          <form action="" class="search-box inmenu">
+            <input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
+            <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul>
+            <li><a href="#">Điện thoại</a>
+              <ul class="sub-menu">
+                <li><a href="#">Iphone</a></li>
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">Xiaomi</a></li>
+                <li><a href="#">Oppo</a></li>
+                <li><a href="#">Realme</a></li>
+              </ul>
             </li>
             <li><a href="#">Laptop</a>
-              <ul class="sub-menu sub02">
+              <ul class="sub-menu">
                 <li><a href="#">Macbook</a></li>
                 <li><a href="#">Asus</a></li>
                 <li><a href="#">Acer</a></li>
@@ -69,344 +66,283 @@
                 <li><a href="#">Loa</a></li>
               </ul>
             </li>
-            <li><a href="#">Chuột</a>
-              <ul class="sub-menu">
-                <li><a href="#">Chuột có dây</a></li>
-                <li><a href="#">Chuột không dây</a></li>
-                <li><a href="#">Chuột gaming</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Bàn phím</a>
-              <ul class="sub-menu">
-                <li><a href="#">Bàn phím có dây</a></li>
-                <li><a href="#">Bàn phím không dây</a></li>
-                <li><a href="#">Bàn phím gaming</a></li>
-              </ul>
-            </li>
-            </ul>
-          </div>
-        </div>
-        </div>
-
-
-
-      <div class="main">
-        <div class="slide">
-          <div class="dieu-huong">
-            <a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
-            <a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
-          </div>
-          <div class="chuyen-slide">
-            <img class="sli" src="images/GioiThieu/slide-1.jpg"/>
-            <img class="sli" src="images/GioiThieu/slide-2.webp"/>
-            <img class="sli" src="images/GioiThieu/slide-3.png"/>
-            <img class="sli" src="images/GioiThieu/slide-4.png"/>
-          </div>
-        </div>
-
-        <div class="titlecont tit01">Điện thoại</div>
-          <div class="content-01">
-            <div class="c-dieuhuong">
-              <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C01prev()"></i></a>
-              <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C01next()"></i></a>
-            </div>
-            <div class="chuyen-content-01">
-            <ul>
-              <li class="ktcontent-01">
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-01.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-02.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-03.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-04.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-05.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C01-sli" src="images/DienThoai/DT-noibat-pic-06.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-            </ul>
-            </div>
-          </div>
-
-          <div class="titlecont tit02">laptop</div>
-
-          <div class="content-02">
-            <div class="c-dieuhuong">
-              <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C02prev()"></i></a>
-              <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C02next()"></i></a>
-            </div>
-            <div class="chuyen-content-02">
-            <ul>
-              <li class="ktcontent-02">
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-01.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-02.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-03.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-04.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-05.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C02-sli" src="images/DienThoai/DT-noibat-pic-06.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-            </ul>
-            </div>
-          </div>
-
-          <div class="titlecont tit03">Máy tính bảng</div>
-          <div class="content-03">
-            <div class="c-dieuhuong">
-              <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C03prev()"></i></a>
-              <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C03next()"></i></a>
-            </div>
-            <div class="chuyen-content-03">
-            <ul>
-              <li class="ktcontent-03">
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-01.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-02.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-03.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-04.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-05.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C03-sli" src="images/DienThoai/DT-noibat-pic-06.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-            </ul>
-            </div>
-          </div>
-
-
-          <div class="titlecont tit04">Âm thanh</div>
-          <div class="content-04">
-            <div class="c-dieuhuong">
-              <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C04prev()"></i></a>
-              <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C04next()"></i></a>
-            </div>
-            <div class="chuyen-content-04">
-            <ul>
-              <li class="ktcontent-04">
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-01.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-02.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-03.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-04.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-05.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C04-sli" src="images/DienThoai/DT-noibat-pic-06.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-            </ul>
-            </div>
-          </div>
-
-          <div class="titlecont tit05">Chuột & bàn phím</div>
-          <div class="content-05">
-            <div class="c-dieuhuong">
-              <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C05prev()"></i></a>
-              <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C05next()"></i></a>
-            </div>
-            <div class="chuyen-content-05">
-            <ul>
-              <li class="ktcontent-05">
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-01.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-02.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-03.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-04.png"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-05.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-              <li>
-                <img class="C05-sli" src="images/DienThoai/DT-noibat-pic-06.jpg"/>
-                <div class="info">
-                  <div class="name-info"><a href="">name</a></div>
-                  <div class="cost">20.000.000 VNĐ</div>
-                </div>
-              </li>
-            </ul>
-            </div>
-          </div>
-        </div>
-
-      <div class="footer">
-        <div class="mail">
-          <div class="txt-mail">Đăng kí nhận tin:</div>
-          <form action="" class="mail-box">
-            <input type="text" placeholder="Nhập email của bạn" class="mail-text">
-            <button class="mail-button">Xác nhận</button>
-          </form>
-        </div>
-        <div class="thong-tin">
-          <ul>
-            <li class="tit-tt">Thông tin liên lạc</li>
-            <li><i class="fa-solid fa-location-dot"></i><a href="#"> xx,xxx,xxxx,HCM</a></li>
-            <li><i class="fa-solid fa-phone"></i><a href="#"> 01234-xxxx-xxxx</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="#"> TCBmobile0123-xxx@gmail.com</a></li>
           </ul>
-          <ul>
-            <li class="tit-tt">Hỗ trợ</li>
-            <li><a href="#">Hướng dẫn mua hàng</a></li>
-            <li><a href="#">Chính sách bảo hành</a></li>
-            <li><a href="#">Gửi góp ý, khiếu nại</a></li>
-          </ul>
-          <ul>
-            <li class="tit-tt">Thanh toán</li>
-            <li><a href="#">Phương thức thanh toán</a></li>
-            <li><a href="#">Ưu đãi thanh toán</a></li>
-          </ul>
+          <div class="login-cart-menu-bars">
+            <a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+          </div>
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="js-header.js"></script>
-    </body>
+
+    <div class="main">
+      <div class="slide">
+        <div class="next-prev">
+          <a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
+          <a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
+        </div>
+        <div class="change-slide">
+          <img class="sli" src="images/GioiThieu/slide-1.jpg" />
+          <img class="sli" src="images/GioiThieu/slide-2.webp" />
+          <img class="sli" src="images/GioiThieu/slide-3.png" />
+          <img class="sli" src="images/GioiThieu/slide-4.png" />
+        </div>
+      </div>
+
+      
+      <div class="content C01">
+        <div class="titlecont">Điện thoại</div>
+        <div class="c-nextprev">
+          <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="Cprev()"></i></a>
+          <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="Cnext()"></i></a>
+        </div>
+        <div class="change-content">
+          <ul>
+            <li class="ktcontent">
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
+              <div class="info">
+                <div class="name-info"><a href="">iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <div class="content C02">
+        <div class="titlecont">laptop</div>
+        <div class="c-nextprev">
+          <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="Cprev()"></i></a>
+          <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="Cnext()"></i></a>
+        </div>
+        <div class="change-content">
+          <ul>
+            <li class="ktcontent">
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="content C03">
+        <div class="titlecont">Máy tính bảng</div>
+        <div class="c-nextprev">
+          <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="Cprev()"></i></a>
+          <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="Cnext()"></i></a>
+        </div>
+        <div class="change-content">
+          <ul>
+            <li class="ktcontent">
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      
+      <div class="content C04">
+        <div class="titlecont">Âm thanh</div>
+        <div class="c-nextprev">
+          <a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="Cprev()"></i></a>
+          <a class="c-next"><i class="fa-solid fa-chevron-right" onclick="Cnext()"></i></a>
+        </div>
+        <div class="change-content">
+          <ul>
+            <li class="ktcontent">
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+            <li>
+              <img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
+              <div class="info">
+                <div class="name-info"><a href="">name</a></div>
+                <div class="cost">20.000.000 VNĐ</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="mail">
+        <div class="txt-mail">Đăng kí nhận tin:</div>
+        <form action="" class="mail-box">
+          <input type="text" placeholder="Nhập email của bạn" class="mail-text">
+          <button class="mail-button">Xác nhận</button>
+        </form>
+      </div>
+      <div class="information">
+        <ul>
+          <li class="tit-inf">Thông tin liên lạc</li>
+          <li><i class="fa-solid fa-location-dot"></i><a href="#"> xx,xxx,xxxx,HCM</a></li>
+          <li><i class="fa-solid fa-phone"></i><a href="#"> 01234-xxxx-xxxx</a></li>
+          <li><i class="fa-solid fa-envelope"></i><a href="#"> TCBmobile0123-xxx@gmail.com</a></li>
+        </ul>
+        <ul>
+          <li class="tit-inf">Hỗ trợ</li>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+          <li><a href="#">Chính sách bảo hành</a></li>
+          <li><a href="#">Gửi góp ý, khiếu nại</a></li>
+        </ul>
+        <ul>
+          <li class="tit-inf">Thanh toán</li>
+          <li><a href="#">Phương thức thanh toán</a></li>
+          <li><a href="#">Ưu đãi thanh toán</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script src="js-header.js"></script>
+</body>
 </html>
