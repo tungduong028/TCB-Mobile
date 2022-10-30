@@ -55,14 +55,14 @@ $(document).ready(function(){
 
 
 //Slide content
-var mql = window.matchMedia('screen and (max-width: 500px)');if (mql.matches){
+var mql = window.matchMedia('screen and (max-width: 600px)');if (mql.matches){
   var C_kichthuoc = document.getElementsByClassName("ktcontent")[0].clientWidth;
   var chuyencontent = document.getElementsByClassName("change-content")[0];
   var C_Slide = document.getElementsByClassName("C-Slide").length;
-  var C_Max = C_Slide*C_kichthuoc-C_kichthuoc;
+  var C_Max = 6*C_kichthuoc;
   var chuyenC = 0;
   function Cnext(){
-    if(chuyenC < C_Max) chuyenC += (C_kichthuoc+30);
+    if(chuyenC < C_Max) chuyenC += C_kichthuoc;
     else chuyenC = 0;
     chuyencontent.style.marginLeft = '-' + chuyenC + 'px';
   }
