@@ -87,3 +87,16 @@ function C04prev(){
   else chuyenC -= C_kichthuoc;
   chuyencontent04.style.marginLeft = '-' + chuyenC + 'px';
 }
+
+function toggleActive(element){
+  element.classList.toggle('active')
+}
+const loginButton = document.querySelector("#login-button")
+const loginLayout = document.querySelector("#wrapper > div.login-layout")
+const loginClose = document.querySelector('#close-login-layout')
+loginButton.addEventListener('click', ()=>{
+  toggleActive(loginLayout)
+})
+loginClose.addEventListener('click', ()=>{
+  toggleActive(loginLayout)
+})
