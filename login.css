@@ -107,7 +107,6 @@ body {
     width: 30%;
     background-color: white;
     position: relative;
-    border-radius: 20px;
 }
 
 .logosignup {
@@ -125,18 +124,19 @@ body {
 }
 
 .signup-group>* {
+    outline: 0;
     border: 0;
     background-color: rgba(128, 128, 128, 0.063);
     border-bottom: 1px solid rgba(128, 128, 128, 0.601);
     margin-top: 10px;
-    outline: none;
     width: 80%;
     height: 40px;
     padding: 0px 20px;
+    border-radius: 10px;
 }
 
 .signup-group>input:hover {
-    border: 1px solid rgba(0, 0, 255, 0.311);
+    border: 1.5px solid rgba(0, 0, 255, 0.311);
     transition: all 0.2s linear;
 }
 
