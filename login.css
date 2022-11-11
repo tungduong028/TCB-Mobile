@@ -70,6 +70,7 @@ body {
     margin-top: 0px;
     margin-bottom: 10px;
     border-radius: 20px;
+    border: 1px solid black;
 }
 
 #submit:hover {
@@ -102,7 +103,7 @@ body {
 
 .form-signup {
 
-    height: 70%;
+    height: 71%;
     width: 30%;
     background-color: white;
     position: relative;
@@ -111,6 +112,7 @@ body {
 
 .logosignup {
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     background-color: black;
     max-height: max-content;
@@ -123,11 +125,19 @@ body {
 }
 
 .signup-group>* {
+    border: 0;
+    background-color: rgba(128, 128, 128, 0.063);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.601);
     margin-top: 10px;
     outline: none;
     width: 80%;
     height: 40px;
     padding: 0px 20px;
+}
+
+.signup-group>input:hover {
+    border: 1px solid rgba(0, 0, 255, 0.311);
+    transition: all 0.2s linear;
 }
 
 .signup-group>#submit {
@@ -144,13 +154,13 @@ body {
 #comeback-login {
     position: absolute;
     left: 2px;
-    background-color: white;
+    background-color: gray;
 }
 
 #close-signup-layout {
     position: absolute;
     right: 2px;
-    background-color: white;
+    background-color: gray;
 }
 
 .tab-signup>a:hover {
