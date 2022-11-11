@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
 	<link rel="stylesheet" href="Style-TrangChu.css">
+	<link rel="stylesheet" href="login.css">
 	<title>TCB mobile</title>
 </head>
 
@@ -74,6 +75,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="login-layout">
 			<div class="form-Login">
 				<a id="close-login-layout" href="#" style="color: red;">X</a>
@@ -84,9 +86,34 @@
 					<p><a href="#">Quên mật khẩu?</a></p>
 					<input type="submit" value="Đăng Nhập" id="submit">
 				</div>
-				<div class="form-question">Bạn chưa có tài khoản? <a href="#" style="font-style: italic;">Đăng kí ngay</a></div>
+				<div class="form-question">Bạn chưa có tài khoản? <a href="#" id="sign-up"
+						style="font-style: italic;">Đăng ký ngay</a></div>
 			</div>
 		</div>
+
+		<div class="sign-up-layout">
+			<div class="form-signup">
+				<div class="tab-signup">
+					<a id="comeback-login" href="#" style="color: gray"><i
+							class="fa-solid fa-circle-arrow-left"></i></a>
+					<a id="close-signup-layout" href="#" style="color: gray"><i
+							class="fa-sharp fa-solid fa-circle-xmark"></i></a>
+				</div>
+				<div class="logosignup">
+					<img src="images/Logo/LOGO-TCB.png" class="logo">
+				</div>
+				<h1 class="form-heading">Đăng Ký Tài Khoản TCB</h1>
+				<div class="signup-group">
+					<input type="text" id="name" placeholder="Nhập Tên Đăng Nhập">
+					<input type="email" id="name" placeholder="Nhập Địa Chỉ Mail">
+					<input type="tel" id="name" placeholder="Nhập Số Điện Thoại">
+					<input type="password" id="pass" placeholder="Nhập Mật Khẩu Của Bạn">
+					<input type="password" id="pass" placeholder="Xác nhận Mật Khẩu">
+					<input type="submit" value="Đăng Ký" id="submit">
+				</div>
+			</div>
+		</div>
+
 		<div class="main">
 			<div class="slide">
 				<div class="next-prev">

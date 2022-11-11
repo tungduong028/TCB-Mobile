@@ -100,3 +100,19 @@ loginButton.addEventListener('click', ()=>{
 loginClose.addEventListener('click', ()=>{
   toggleActive(loginLayout)
 })
+
+const signup = document.querySelector("#sign-up")
+const signupLayout = document.querySelector("#wrapper > div.sign-up-layout")
+const signupClose = document.querySelector('#close-signup-layout') 
+const comebackLogin = document.querySelector('#comeback-login') 
+signup.addEventListener('click', ()=>{
+  toggleActive(signupLayout)
+  toggleActive(loginLayout)
+})
+signupClose.addEventListener('click', ()=>{
+  toggleActive(signupLayout)
+})
+comebackLogin.addEventListener('click', ()=>{
+  toggleActive(signupLayout)
+  toggleActive(loginLayout)
+})

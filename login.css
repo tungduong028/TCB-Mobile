@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.login-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #151414a0;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.login-layout.active {
+    visibility: visible;
+}
+
+.form-Login {
+    position: relative;
+    height: 300px;
+    width: 550px;
+    background-color: #fff;
+}
+
+#close-login-layout {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.form-heading {
+    font-size: 25px;
+    color: rgba(255, 0, 0, 0.989);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.form-group>* {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    outline: none;
+    width: 80%;
+    height: 40px;
+    padding: 0px 20px;
+}
+
+
+.form-group>p {
+    margin-left: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: right;
+    font-style: italic;
+}
+
+#submit {
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#submit:hover {
+    background-color: red;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.form-question {
+    text-align: center;
+}
+
+/*dang ki tai khoan*/
+
+.sign-up-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #151414a0;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.sign-up-layout.active {
+    visibility: visible;
+}
+
+.form-signup {
+
+    height: 70%;
+    width: 30%;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+}
+
+.logosignup {
+    padding-top: 20px;
+    text-align: center;
+    background-color: black;
+    max-height: max-content;
+}
+
+.signup-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-group>* {
+    margin-top: 10px;
+    outline: none;
+    width: 80%;
+    height: 40px;
+    padding: 0px 20px;
+}
+
+.signup-group>#submit {
+    margin-top: 20px;
+}
+
+.tab-signup>* {
+    margin: 8px;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+#comeback-login {
+    position: absolute;
+    left: 2px;
+    background-color: white;
+}
+
+#close-signup-layout {
+    position: absolute;
+    right: 2px;
+    background-color: white;
+}
+
+.tab-signup>a:hover {
+    background-color: red !important;
+    color: black !important;
+}
