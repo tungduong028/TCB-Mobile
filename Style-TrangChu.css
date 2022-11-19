@@ -1,63 +1,54 @@
-html {
+html{
     font-size: 5px;
 }
-
-body {
+body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
 }
-
-a {
+a{
     text-decoration: none;
 }
-
-#wrapper {
+#wrapper{
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding:0;
     font-size: 15px;
-    height: 3100px;
+    height: 4500px;
 }
-
-@media all and (max-width: 600px) {
-    #wrapper {
-        height: 2400px;
+@media all and (max-width: 600px){
+    #wrapper{
+        height:2400px;
     }
-
-    #header {
-        margin: 0;
-        padding: 0;
+    #header{
+        margin:0;
+        padding:0;
         width: 100%;
         background-color: #0B0C10;
         display: block;
-        z-index: 1000;
+        z-index:1000;
     }
-
-    .header-top {
-        width: 100%;
-        position: relative;
-        display: none;
+    .header-top{
+        width:100%;
+        position:relative;
+        display:none;
     }
-
-    .logo {
+    .logo{
         width: 6em;
         height: 4em;
         margin: 0 10%;
     }
-
-    .search-box {
+    .search-box{
         width: 29.7em;
         height: 2.8em;
         margin: auto;
         background-color: #fff;
-        display: flex;
+        display:flex;
         border-radius: 1em;
     }
-
-    .search-box .search-text {
+    .search-box .search-text{
         width: 24em;
         height: 2.65em;
         border: none;
@@ -66,8 +57,7 @@ a {
         padding: 1em;
         font-size: 16px;
     }
-
-    .search-box .search-button {
+    .search-box .search-button{
         width: 5em;
         height: 3.2em;
         border: none;
@@ -75,150 +65,128 @@ a {
         border-radius: 0 1em 1em 0;
         cursor: pointer;
     }
-
-    #header-bot {
+    #header-bot{
         height: 5em;
         width: 100%;
-        display: block;
+        display:block;
     }
-
-    .hienThi {
+    .hienThi{
         display: block !important;
     }
-
-    .menu-bars {
+    .menu-bars{
         z-index: 100;
         font-size: 2em;
-        color: #fff;
-        padding: 0;
+        color:#fff;
+        padding:0;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width:100%;
         box-sizing: border-box;
-        position: fixed;
+        position:fixed;
         background-color: #0B0C10;
     }
-
-    .login-cart-menu-bars {
+    .login-cart-menu-bars{
         font-size: 17px;
-        position: relative;
+        position:relative;
         top: 7em;
         left: 25%;
     }
-
-    .login-cart-menu-bars a {
-        color: #fff;
+    .login-cart-menu-bars a{
+        color:#fff;
         margin: 0.5em;
     }
-
-    .menu-bars img {
+    .menu-bars img{
         width: 4em;
-        height: 2em;
-        margin: 0;
+        height:2em;
+        margin:0;
     }
-
-    .icon-bars {
+    .icon-bars{
         margin: 0.5em;
     }
-
-    .menu {
+    .menu{
         width: 100%;
         height: 52em;
         background-color: #0B0C10;
         display: none;
     }
-
-    .inmenu {
-        position: relative;
-        top: 5em;
+    .inmenu{
+        position:relative;
+        top:5em;
     }
-
-    .menu ul {
+    .menu ul{
         width: 100%;
-        margin: 0 auto;
+        margin:0 auto;
         padding: 0;
         list-style: none;
         align-items: center;
         justify-content: space-between;
         display: grid;
         grid-template-columns: 50% 50%;
-        position: relative;
-        top: 5em;
+        position:relative;
+        top:5em;
     }
-
-    .menu ul li {
-        margin: 0 auto;
+    .menu ul li{
+        margin:0 auto;
         font-size: 15px;
         text-align: center;
         width: 8em;
         padding: 1em 0;
         z-index: 5;
     }
-
-    .menu ul li a {
+    .menu ul li a{
         text-decoration: none;
-        color: #c89979;
+        color:#c89979;
     }
-
     .menu .sub-menu {
         position: relative;
-        top: 1em;
+        top:1em;
         display: block;
     }
-
-    .menu .sub-menu li {
+    .menu .sub-menu li{
         display: block;
         height: 1.5em;
     }
-
-    .menu .sub-menu li a {
-        color: #fff;
+    .menu .sub-menu li a{
+        color:#fff;
     }
 
-    .main {
-        margin: 0 auto;
-        padding: 0;
+    .main{
+        margin:0 auto;
+        padding:0;
         width: 100%;
-        height: 2400px;
+        height: 2500px;
     }
-
-    .slide {
+    .slide{
         width: 25em;
-        margin: 0 auto;
+        margin:0 auto;
         overflow: hidden;
         position: relative;
         top: 6em;
         border-radius: 1em;
     }
-
-    .change-slide {
+    .change-slide{
         width: 700em;
         transition: all 0.5s;
     }
-
-    .change-slide img {
+    .change-slide img{
         width: 25em;
         height: 10em;
         float: left;
     }
-
-    .next-prev {
+    .next-prev{
         position: absolute;
         top: 4em;
-        color: #fff;
-        width: 100%;
+        color:#fff;
+        width:100%;
     }
-
-    .next-prev i {
+    .next-prev i{
         font-size: 2em;
         cursor: pointer;
     }
-
-    .next {
+    .next{
         float: right;
     }
-
-    .titlecont {
+    .titlecont{
         border: 1px solid black;
         width: 15em;
         text-align: center;
@@ -226,14 +194,13 @@ a {
         font-size: 1.2em;
         padding: 0.3em;
         background-color: #0B0C10;
-        color: #fff;
+        color:#fff;
         border-radius: 1em;
         text-transform: uppercase;
     }
-
-    .content {
+    .content{
         width: 25em;
-        margin: 0 auto;
+        margin:0 auto;
         margin-bottom: 10em;
         overflow: hidden;
         position: relative;
@@ -243,19 +210,16 @@ a {
         border-radius: 1em;
         box-shadow: 0.2em 0.2em dimgray;
     }
-
-    .change-content {
+    .change-content{
         width: 750em;
         transition: all 0.5s;
     }
-
-    .change-content ul {
+    .change-content ul{
         list-style-type: none;
-        margin: 0;
+        margin:0;
         padding: 0 3em;
     }
-
-    .change-content ul li {
+    .change-content ul li{
         float: left;
         width: 15em;
         margin: 0 3em 0 -1em;
@@ -263,61 +227,50 @@ a {
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
     }
-
-    .change-content ul li a {
+    .change-content ul li a{
         text-transform: uppercase;
-        color: black;
+        color:black;
     }
-
-    .change-content .C-Slide {
+    .change-content .C-Slide{
         width: 15em;
         padding: 0.2em 0;
     }
-
-    .info {
+    .info{
         padding: 0.5em;
         border-top: 1px solid black;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow:hidden;
     }
-
-    .info .name-info {
+    .info .name-info{
         height: 4em;
-        overflow: hidden;
+        overflow:hidden;
     }
-
-    .cost {
+    .cost{
         font-weight: bold;
     }
-
-    .c-nextprev {
-        position: absolute;
+    .c-nextprev{
+        position:absolute;
         top: 12em;
-        width: 100%;
+        width:100%;
     }
-
-    .c-nextprev i {
+    .c-nextprev i{
         font-size: 2em;
         cursor: pointer;
     }
-
-    .c-next {
+    .c-next{
         float: right;
     }
-
-    .footer {
+    .footer{
         width: 100%;
-        background-color: #0B0C10;
+        background-color:#0B0C10;
     }
-
-    .mail {
+    .mail{
         width: 100%;
         height: 9em;
         display: block;
         margin: 0;
         padding: 1em 0;
     }
-
     .mail-box {
         width: 25.7em;
         height: 2.8em;
@@ -326,8 +279,7 @@ a {
         border-radius: 1em;
         margin: 0 auto;
     }
-
-    .mail-text {
+    .mail-text{
         width: 20em;
         height: 2.65em;
         border: none;
@@ -336,8 +288,7 @@ a {
         padding: 1em;
         font-size: 16px;
     }
-
-    .mail-button {
+    .mail-button{
         width: 5em;
         height: 3.2em;
         border: none;
@@ -345,8 +296,7 @@ a {
         border-radius: 0 1em 1em 0;
         cursor: pointer;
     }
-
-    .txt-mail {
+    .txt-mail{
         width: 100%;
         padding: 1em;
         margin: 0 auto;
@@ -356,8 +306,7 @@ a {
         box-sizing: border-box;
         color: #fff;
     }
-
-    .information {
+    .information{
         width: 100%;
         padding: 0;
         margin: 0;
@@ -365,60 +314,51 @@ a {
         justify-content: space-between;
         border-top: solid 2px #fff;
     }
-
-    .information ul {
-        color: #fff;
-        width: 30%;
+    .information ul{
+        color:#fff;
+        width:30%;
         list-style-type: none;
     }
-
-    .information ul li {
+    .information ul li{
         margin: 0.5em;
     }
-
-    .information ul li a {
+    .information ul li a{
         text-decoration: none;
         color: #fff;
         font-size: 12px;
     }
-
-    .tit-inf {
+    .tit-inf{
         text-transform: uppercase;
     }
 }
-
-@media all and (min-width: 600px) {
-    #header {
-        margin: 0;
-        padding: 0;
+@media all and (min-width: 600px){
+    #header{
+        margin:0;
+        padding:0;
         width: 100%;
         background-color: #0B0C10;
         display: block;
         position: fixed;
-        z-index: 1000;
+        z-index:1000;
     }
-
-    .header-top {
-        width: 100%;
+    .header-top{
+        width:100%;
         display: flex;
     }
-
-    .logo {
+    .logo{
         width: 6em;
         height: 4em;
         margin: 0 1em;
     }
-
-    .search-box {
+    .search-box{
         width: 25.7em;
         height: 2.8em;
         margin: auto;
         background-color: #fff;
-        display: flex;
+        display:flex;
         border-radius: 1em;
     }
-
-    .search-box .search-text {
+    .search-box .search-text{
         width: 20em;
         height: 2.65em;
         border: none;
@@ -427,8 +367,7 @@ a {
         padding: 1em;
         font-size: 16px;
     }
-
-    .search-box .search-button {
+    .search-box .search-button{
         width: 5em;
         height: 3.2em;
         border: none;
@@ -436,60 +375,49 @@ a {
         border-radius: 0 1em 1em 0;
         cursor: pointer;
     }
-
-    .login-cart {
+    .login-cart{
         margin: auto 1em;
     }
-
-    .login-cart a {
-        color: #fff;
+    .login-cart a{
+        color:#fff;
         text-decoration: none;
         font-size: 10px;
         display: block;
         margin: 1em 0;
     }
-
-    .none {
+    .none{
         display: none;
     }
-
-    .inmenu {
+    .inmenu{
+        display:none;
+    }
+    .nut_dropdown{
         display: none;
     }
-
-    .nut_dropdown {
+    .menu-bars{
+        display:none;
+    }
+    .login-cart-menu-bars{
         display: none;
     }
-
-    .menu-bars {
-        display: none;
-    }
-
-    .login-cart-menu-bars {
-        display: none;
-    }
-
-    #header-bot {
+    #header-bot{
         height: 5em;
         width: 100%;
     }
-
-    .menu {
+    .menu{
         width: 100%;
         background-color: #0B0C10;
     }
-
-    .menu ul {
+    .menu ul{
         width: 80%;
-        margin: 0 auto;
+        margin:0 auto;
         padding: 0;
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
-    .menu ul li {
+    .menu ul li{
         font-size: 18px;
         text-align: center;
         width: 8em;
@@ -497,79 +425,65 @@ a {
         position: relative;
         z-index: 5;
     }
-
-    .menu ul li a {
+    .menu ul li a{
         text-decoration: none;
-        color: #fff;
+        color:#fff;
     }
-
     .menu li:hover {
-        background-color: dimgray;
+        background-color:dimgray;
         text-decoration: underline;
     }
-
     .menu .sub-menu {
         position: absolute;
         top: 3em;
         display: none;
     }
-
-    .menu .sub-menu li {
+    .menu .sub-menu li{
         background-color: #0B0C10;
     }
-
     .menu .sub-menu li:hover {
         background-color: dimgray;
     }
-
     .menu li:hover .sub-menu {
         display: block;
     }
-
-    .main {
-        margin: 0 auto;
-        padding: 0;
+    .main{
+        margin:0 auto;
+        padding:0;
         width: 100%;
-        height: 3100px;
+        height: 7200px;
     }
-
-    .slide {
+    .slide{
         width: 50em;
-        margin: 0 auto;
+        margin:0 auto;
         overflow: hidden;
         position: relative;
         top: 12em;
         border-radius: 1em;
     }
-
-    .change-slide {
+    .change-slide{
         width: 750em;
         transition: all 0.5s;
     }
-
-    .change-slide img {
+    .change-slide img{
         width: 50em;
         height: 30em;
         float: left;
     }
-
-    .next-prev {
+    .next-prev{
         position: absolute;
         top: 13em;
-        color: #fff;
-        width: 100%;
+        color:#fff;
+        width:100%;
     }
-
-    .next-prev i {
+    .next-prev i{
         font-size: 3em;
         cursor: pointer;
     }
-
-    .next {
+    .next{
         float: right;
     }
-
-    .titlecont {
+    .titlecont{
         border: 1px solid black;
         width: 15em;
         text-align: center;
@@ -577,14 +491,13 @@ a {
         font-size: 1.2em;
         padding: 0.3em;
         background-color: #0B0C10;
-        color: #fff;
+        color:#fff;
         border-radius: 1em;
         text-transform: uppercase;
     }
-
-    .content {
+    .content{
         width: 50em;
-        margin: 0 auto;
+        margin:0 auto;
         margin-bottom: 10em;
         overflow: hidden;
         position: relative;
@@ -594,431 +507,61 @@ a {
         border-radius: 1em;
         box-shadow: 0.2em 0.2em dimgray;
     }
-
-    .change-content {
-        width: 750em;
+    .change-content{
+        width: 54em;
         transition: all 0.5s;
     }
-
-    .change-content ul {
+    .change-content ul{
         list-style-type: none;
-        margin: 0;
+        margin:0;
         padding: 0 3em;
-    }
-
-    .change-content ul li {
-        float: left;
-        width: 15em;
-        margin: 0 3em 0 -1em;
-        border: 1px solid black;
-        border-radius: 0.5em;
-        box-shadow: 0.1em 0.1em dimgray;
-    }
-
-    .change-content ul li a {
-        text-transform: uppercase;
-        color: black;
-    }
-
-    .change-content .C-Slide {
-        width: 15em;
-        padding: 0.2em 0;
-    }
-
-    .info {
-        padding: 0.5em;
-        border-top: 1px solid black;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .info .name-info {
-        height: 4em;
-        overflow: hidden;
-    }
-
-    .cost {
-        font-weight: bold;
-    }
-
-    .c-nextprev {
-        position: absolute;
-        top: 12em;
-        width: 100%;
-    }
-
-    .c-nextprev i {
-        font-size: 2em;
-        cursor: pointer;
-    }
-
-    .c-next {
-        float: right;
-    }
-
-    .footer {
-        width: 100%;
-        background-color: #0B0C10;
-    }
-
-    .mail {
-        width: 100%;
-        height: 9em;
-        display: block;
-        margin: 0;
-        padding: 1em 0;
-    }
-
-    .mail-box {
-        width: 29.7em;
-        height: 2.8em;
-        background-color: #fff;
-        display: flex;
-        border-radius: 1em;
-        margin: 0 auto;
-    }
-
-    .mail-text {
-        width: 24em;
-        height: 2.65em;
-        border: none;
-        border-radius: 1em 0 0 1em;
-        outline: none;
-        padding: 1em;
-        font-size: 16px;
-    }
-
-    .mail-button {
-        width: 5em;
-        height: 3.2em;
-        border: none;
-        background-color: #c89979;
-        border-radius: 0 1em 1em 0;
-        cursor: pointer;
-    }
-
-    .txt-mail {
-        width: 100%;
-        padding: 1em;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        box-sizing: border-box;
-        color: #fff;
-    }
-
-    .information {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        border-top: solid 2px #fff;
-    }
-
-    .information ul {
-        color: #fff;
-        width: 30%;
-        list-style-type: none;
-    }
-
-    .information ul li {
-        margin: 1em;
-    }
-
-    .information ul li a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .tit-inf {
-        text-transform: uppercase;
-    }
-}
-
-@media all and (min-width: 1024px) {
-    #header {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background-color: #0B0C10;
-        display: block;
-        position: fixed;
-        z-index: 1000;
-    }
-
-    .header-top {
-        width: 100%;
-        display: flex;
-    }
-
-    .logo {
-        width: 8em;
-        height: 6em;
-        margin: 0 10%;
-    }
-
-    .search-box {
-        width: 29.7em;
-        height: 2.8em;
-        margin: auto;
-        background-color: #fff;
-        display: flex;
-        border-radius: 1em;
-    }
-
-    .search-box .search-text {
-        width: 24em;
-        height: 2.65em;
-        border: none;
-        border-radius: 1em 0 0 1em;
-        outline: none;
-        padding: 1em;
-        font-size: 16px;
-    }
-
-    .search-box .search-button {
-        width: 5em;
-        height: 3.2em;
-        border: none;
-        background-color: #c89979;
-        border-radius: 0 1em 1em 0;
-        cursor: pointer;
-    }
-
-    .login-cart {
-        margin: auto 5%;
-    }
-
-    .login-cart a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        display: block;
-        margin: 1em;
-    }
-
-    .none {
-        display: none;
-    }
-
-    .inmenu {
-        display: none;
-    }
-
-    .nut_dropdown {
-        display: none;
-    }
-
-    .menu-bars {
-        display: none;
-    }
-
-    .login-cart-menu-bars {
-        display: none;
-    }
-
-    #header-bot {
-        height: 5em;
-        width: 100%;
-    }
-
-    .menu {
-        width: 100%;
-        background-color: #0B0C10;
-    }
-
-    .menu ul {
-        width: 80%;
-        margin: 0 auto;
-        padding: 0;
-        list-style: none;
-        display: flex;
         align-items: center;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
-
-    .menu ul li {
-        font-size: 18px;
-        text-align: center;
-        width: 8em;
-        padding: 1em 0;
-        position: relative;
-        z-index: 5;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .menu li:hover {
-        background-color: dimgray;
-        text-decoration: underline;
-    }
-
-    .menu .sub-menu {
-        position: absolute;
-        top: 3em;
-        display: none;
-    }
-
-    .menu .sub-menu li {
-        background-color: #0B0C10;
-    }
-
-    .menu .sub-menu li:hover {
-        background-color: dimgray;
-    }
-
-    .menu li:hover .sub-menu {
-        display: block;
-    }
-
-    .main {
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        height: 3100px;
-    }
-
-    .slide {
-        width: 75em;
-        margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-        top: 12em;
-        border-radius: 1em;
-    }
-
-    .change-slide {
-        width: 750em;
-        transition: all 0.5s;
-    }
-
-    .change-slide img {
-        width: 75em;
-        height: 35em;
-        float: left;
-    }
-
-    .next-prev {
-        position: absolute;
-        top: 15em;
-        color: #fff;
-        width: 100%;
-    }
-
-    .next-prev i {
-        font-size: 3em;
-        cursor: pointer;
-    }
-
-    .next {
-        float: right;
-    }
-
-    .titlecont {
-        border: 1px solid black;
+    .change-content ul li{
         width: 15em;
-        text-align: center;
-        margin: 1em auto;
-        font-size: 1.2em;
-        padding: 0.3em;
-        background-color: #0B0C10;
-        color: #fff;
-        border-radius: 1em;
-        text-transform: uppercase;
-    }
-
-    .content {
-        width: 75em;
-        margin: 0 auto;
-        margin-bottom: 10em;
-        overflow: hidden;
-        position: relative;
-        top: 20em;
-        border: 1px solid black;
-        padding-bottom: 1.5em;
-        border-radius: 1em;
-        box-shadow: 0.2em 0.2em dimgray;
-    }
-
-    .change-content {
-        width: 750em;
-        transition: all 0.5s;
-    }
-
-    .change-content ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0 3em;
-    }
-
-    .change-content ul li {
-        float: left;
-        width: 15em;
-        margin: 0 3em 0 -1em;
+        margin: 0.5em 3em 0.5em 1em;
         border: 1px solid black;
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
     }
-
-    .change-content ul li a {
+    .change-content ul li a{
         text-transform: uppercase;
-        color: black;
+        color:black;
     }
-
-    .change-content .C-Slide {
+    .change-content .C-Slide{
         width: 15em;
         padding: 0.2em 0;
     }
-
-    .info {
+    .info{
         padding: 0.5em;
         border-top: 1px solid black;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow:hidden;
     }
-
-    .info .name-info {
+    .info .name-info{
         height: 4em;
-        overflow: hidden;
+        overflow:hidden;
     }
-
-    .cost {
+    .cost{
         font-weight: bold;
     }
-
-    .c-nextprev {
-        position: absolute;
-        top: 12em;
+    .c-nextprev{
+        display: none;
+    }
+    .footer{
         width: 100%;
+        background-color:#0B0C10;
     }
-
-    .c-nextprev i {
-        font-size: 2em;
-        cursor: pointer;
-    }
-
-    .c-next {
-        float: right;
-    }
-
-    .footer {
-        width: 100%;
-        background-color: #0B0C10;
-    }
-
-    .mail {
+    .mail{
         width: 100%;
         height: 9em;
         display: block;
         margin: 0;
         padding: 1em 0;
     }
-
     .mail-box {
         width: 29.7em;
         height: 2.8em;
@@ -1027,8 +570,7 @@ a {
         border-radius: 1em;
         margin: 0 auto;
     }
-
-    .mail-text {
+    .mail-text{
         width: 24em;
         height: 2.65em;
         border: none;
@@ -1037,8 +579,7 @@ a {
         padding: 1em;
         font-size: 16px;
     }
-
-    .mail-button {
+    .mail-button{
         width: 5em;
         height: 3.2em;
         border: none;
@@ -1046,8 +587,7 @@ a {
         border-radius: 0 1em 1em 0;
         cursor: pointer;
     }
-
-    .txt-mail {
+    .txt-mail{
         width: 100%;
         padding: 1em;
         margin: 0 auto;
@@ -1057,8 +597,7 @@ a {
         box-sizing: border-box;
         color: #fff;
     }
-
-    .information {
+    .information{
         width: 100%;
         padding: 0;
         margin: 0;
@@ -1066,22 +605,310 @@ a {
         justify-content: space-between;
         border-top: solid 2px #fff;
     }
-
-    .information ul {
-        color: #fff;
-        width: 30%;
+    .information ul{
+        color:#fff;
+        width:30%;
         list-style-type: none;
     }
-
-    .information ul li {
+    .information ul li{
         margin: 1em;
     }
-
-    .information ul li a {
+    .information ul li a{
         text-decoration: none;
         color: #fff;
     }
-
-    .tit-inf {
+    .tit-inf{
         text-transform: uppercase;
     }
+    }
+@media all and (min-width: 1024px){
+#header{
+    margin:0;
+    padding:0;
+    width: 100%;
+    background-color: #0B0C10;
+    display: block;
+    position: fixed;
+    z-index:1000;
+}
+.header-top{
+    width:100%;
+    display: flex;
+}
+.logo{
+    width: 8em;
+    height: 6em;
+    margin: 0 10%;
+}
+.search-box{
+    width: 29.7em;
+    height: 2.8em;
+    margin: auto;
+    background-color: #fff;
+    display:flex;
+    border-radius: 1em;
+}
+.search-box .search-text{
+    width: 24em;
+    height: 2.65em;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    outline: none;
+    padding: 1em;
+    font-size: 16px;
+}
+.search-box .search-button{
+    width: 5em;
+    height: 3.2em;
+    border: none;
+    background-color: #c89979;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+}
+.login-cart{
+    margin: auto 5%;
+}
+.login-cart a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin: 1em;
+}
+.none{
+    display: none;
+}
+.inmenu{
+    display:none;
+}
+.nut_dropdown{
+    display: none;
+}
+.menu-bars{
+    display:none;
+}
+.login-cart-menu-bars{
+    display: none;
+}
+#header-bot{
+    height: 5em;
+    width: 100%;
+}
+.menu{
+    width: 100%;
+    background-color: #0B0C10;
+}
+.menu ul{
+    width: 80%;
+    margin:0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu ul li{
+    font-size: 18px;
+    text-align: center;
+    width: 8em;
+    padding: 1em 0;
+    position: relative;
+    z-index: 5;
+}
+.menu ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.menu li:hover {
+    background-color:dimgray;
+    text-decoration: underline;
+}
+.menu .sub-menu {
+    position: absolute;
+    top: 3em;
+    display: none;
+}
+.menu .sub-menu li{
+    background-color: #0B0C10;
+}
+.menu .sub-menu li:hover {
+    background-color: dimgray;
+}
+.menu li:hover .sub-menu {
+    display: block;
+}
+.main{
+    margin:0 auto;
+    padding:0;
+    width: 100%;
+    height: 4500px;
+}
+.slide{
+    width: 75em;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 12em;
+    border-radius: 1em;
+}
+.change-slide{
+    width: 750em;
+    transition: all 0.5s;
+}
+.change-slide img{
+    width: 75em;
+    height: 35em;
+    float: left;
+}
+.next-prev{
+    position: absolute;
+    top: 15em;
+    color:#fff;
+    width:100%;
+}
+.next-prev i{
+    font-size: 3em;
+    cursor: pointer;
+}
+.next{
+    float: right;
+}
+.titlecont{
+    border: 1px solid black;
+    width: 15em;
+    text-align: center;
+    margin: 1em auto;
+    font-size: 1.2em;
+    padding: 0.3em;
+    background-color: #0B0C10;
+    color:#fff;
+    border-radius: 1em;
+    text-transform: uppercase;
+}
+.content{
+    width: 75em;
+    margin:0 auto;
+    margin-bottom: 10em;
+    overflow: hidden;
+    position: relative;
+    top: 20em;
+    border: 1px solid black;
+    padding-bottom: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em dimgray;
+}
+.change-content{
+    width: 75em;
+    transition: all 0.5s;
+    
+}
+.change-content ul{
+    list-style-type: none;
+    margin:0 auto;
+    padding: 0 3em;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.change-content ul li{
+    width: 15em;
+    margin: 0.5em 3em 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em dimgray;
+}
+.change-content ul li a{
+    text-transform: uppercase;
+    color:black;
+}
+.change-content .C-Slide{
+    width: 15em;
+    padding: 0.2em 0;
+}
+.info{
+    padding: 0.5em;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.info .name-info{
+    height: 4em;
+    overflow:hidden;
+}
+.cost{
+    font-weight: bold;
+}
+.c-nextprev{
+    display:none;   
+}
+.footer{
+    width: 100%;
+    background-color:#0B0C10;
+}
+.mail{
+    width: 100%;
+    height: 9em;
+    display: block;
+    margin: 0;
+    padding: 1em 0;
+}
+.mail-box {
+    width: 29.7em;
+    height: 2.8em;
+    background-color: #fff;
+    display: flex;
+    border-radius: 1em;
+    margin: 0 auto;
+}
+.mail-text{
+    width: 24em;
+    height: 2.65em;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    outline: none;
+    padding: 1em;
+    font-size: 16px;
+}
+.mail-button{
+    width: 5em;
+    height: 3.2em;
+    border: none;
+    background-color: #c89979;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+}
+.txt-mail{
+    width: 100%;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #fff;
+}
+.information{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px #fff;
+}
+.information ul{
+    color:#fff;
+    width:30%;
+    list-style-type: none;
+}
+.information ul li{
+    margin: 1em;
+}
+.information ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.tit-inf{
+    text-transform: uppercase;
+}
+}
