@@ -39,7 +39,7 @@ $(document).ready(function(){
 //slide điện thoại
 var C_kichthuoc = document.getElementsByClassName("ktcontent")[0].clientWidth;
 var chuyencontent = document.getElementsByClassName("change-content")[0];
-var C_Max = 6*C_kichthuoc-4*C_kichthuoc;
+var C_Max = 8*C_kichthuoc;
 var chuyenC = 0;
 function Cnext(){
   if(chuyenC < C_Max) chuyenC += C_kichthuoc;
