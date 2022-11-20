@@ -1046,6 +1046,7 @@ a {
     }
 
     .product-item__name {
+        color: #0B0C10;
         line-height: 4rem;
         margin: 5px 0;
     }
