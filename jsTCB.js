@@ -122,6 +122,10 @@ comebackLogin.addEventListener('click', () => {
   toggleActive(loginLayout)
 })
 
+const signupButton = document.querySelector("#signup-button")
+signupButton.addEventListener('click', () => {
+  toggleActive(signupLayout)
+})
 
 function setSignup(e) {
   event.preventDefault();
@@ -173,6 +177,7 @@ function login(e) {
     }
     else {
       alert("Đăng Nhập Thành Công")
+      window.location.href="Todo.html"
     }
   }
 }

@@ -103,7 +103,7 @@ body {
 
 .form-signup {
 
-    height: 71%;
+    height: 74%;
     width: 30%;
     background-color: white;
     position: relative;
@@ -149,12 +149,6 @@ body {
     padding: 5px;
     border-radius: 20px;
     font-size: 15px;
-}
-
-#comeback-login {
-    position: absolute;
-    left: 2px;
-    background-color: gray;
 }
 
 #close-signup-layout {
