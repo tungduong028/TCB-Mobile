@@ -1,9 +1,9 @@
 <html>
-
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
-	<link rel="stylesheet" href="Style-TrangChu.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="Style-TrangSanPham.css">
 	<link rel="stylesheet" href="login.css">
 	<title>TCB mobile</title>
 </head>
@@ -18,8 +18,8 @@
 					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 				<div class="login-cart">
-					<a id="account" href="#"><i class="fa-solid fa-user"></i> Tài Khoản</a>
-					<a id="shoppingcart"href=" #"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Tài Khoản</a>
+					<a id="shoppingcart" href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
 				</div>
 			</div>
 			<div class="header-bot">
@@ -68,10 +68,6 @@
 							</ul>
 						</li>
 					</ul>
-					<div class="login-cart-menu-bars">
-						<a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
-						<a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -86,16 +82,14 @@
 					<p><a href="#">Quên mật khẩu?</a></p>
 					<input type="submit" value="Đăng Nhập" id="submit">
 				</div>
-				<div class="form-question">Bạn chưa có tài khoản? <a href="#" id="sign-up"
-						style="font-style: italic;">Đăng ký ngay</a></div>
+				<div class="form-question">Bạn chưa có tài khoản?<a href="#" id="sign-up" style="font-style: italic;">
+						Đăng ký ngay!</a></div>
 			</form>
 		</div>
 
 		<div class="sign-up-layout">
 			<form class="form-signup" onsubmit="setSignup()">
 				<div class="tab-signup">
-					<a id="comeback-login" href="#" style="color: white"><i
-							class="fa-solid fa-circle-arrow-left"></i></a>
 					<a id="close-signup-layout" href="#" style="color: white"><i
 							class="fa-sharp fa-solid fa-circle-xmark"></i></a>
 				</div>
@@ -111,302 +105,347 @@
 					<input type="password" id="confirmpass" placeholder="Xác nhận Mật Khẩu">
 					<input type="submit" value="Đăng Ký" id="submit">
 				</div>
+				<div class="form-question">Bạn đã có tài khoản?<a href="#" id="comeback-login"
+						style="font-style: italic;">
+						Đăng nhập ngay!</a></div>
 			</form>
 		</div> -->
 
+
 		<div class="main">
-			<div class="slide">
-				<div class="next-prev">
-					<a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
-					<a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
-				</div>
-				<div class="change-slide">
-					<img class="sli" src="images/GioiThieu/slide-1.jpg" />
-					<img class="sli" src="images/GioiThieu/slide-2.webp" />
-					<img class="sli" src="images/GioiThieu/slide-3.png" />
-					<img class="sli" src="images/GioiThieu/slide-4.png" />
+			<!-- Banner Image -->
+            <div class="container">
+				<a href="">
+                	<img src="images/GioiThieu/Banner_iPhone_14.jpg" alt="">
+				</a>
+			</div>
+
+			<!-- Filter -->
+            <div class="container">
+                <div class="filter">
+                    <span class="filter__label">Hiển thị theo</span>
+
+                    <div class="select-input">
+                        <span class="select-input__label">Hãng</span>
+						<i class="fa-solid fa-angle-down"></i>
+
+						<!-- List options -->
+						<ul class="select-input__list">
+							<li class="select-input__item">
+								<a href="" class="select-input__link">Iphone</a>
+							</li>
+							<li>
+								<a href="" class="select-input__link">Samsung</a>
+							</li>
+							<li>
+								<a href="" class="select-input__link">Xiaomi</a>
+							</li>
+							<li>
+								<a href="" class="select-input__link">Oppo</a>
+							</li>
+							<li>
+								<a href="" class="select-input__link">Realme</a>
+							</li>
+						</ul>
+                    </div>
+
+					<div class="select-input">
+                        <span class="select-input__label">Giá</span>
+						<i class="fa-solid fa-angle-down"></i>
+
+						<!-- List options -->
+						<ul class="select-input__list">
+							<li class="select-input__item">
+								<a href="" class="select-input__link">Giá: Thấp đến cao</a>
+							</li>
+							<li>
+								<a href="" class="select-input__link">Giá: Cao đến thấp</a>
+							</li>
+						</ul>
+                    </div>
+
+					<div class="filter__page">
+						<span class="filter__page-num">
+							<span class="filter__page-current">1</span>/14
+						</span>
+
+						<div class="filter__page-control">
+							<a href="" class="filter__page-btn filter__page-btn--disabled">
+								<i class="filter__page-icon fa-solid fa-angle-left"></i>
+							</a>
+							<a href="" class="filter__page-btn">
+								<i class="filter__page-icon fa-solid fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+                </div>
+            </div>
+
+			<!-- List Product -->
+			<div class="product-grid">
+				<h2>Điện thoại</h2>
+				<div class="grid__row">
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid__column">
+						<a class="product-item" href="">
+							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
+							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
+							<span class="product-item__price">11.990.000đ</span>
+							<div class="product-item__action">
+								<span class="product-item__label">Yêu thích</span>
+								<span class="product-item__like product-item__like--liked">
+									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
+									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
+								</span>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 
-
-			<div class="content">
-				<div class="titlecont">Điện thoại</div>
-				<div class="c-nextprev">
-					<a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="Cprev()"></i></a>
-					<a class="c-next"><i class="fa-solid fa-chevron-right" onclick="Cnext()"></i></a>
-				</div>
-				<div class="change-content">
-					<ul>
-						<li class="ktcontent">
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
-							<div class="info">
-								<div class="name-info"><a href="">iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt
-										Nam</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-
-			<div class="content">
-				<div class="titlecont">laptop</div>
-				<div class="c-nextprev">
-					<a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C02prev()"></i></a>
-					<a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C02next()"></i></a>
-				</div>
-				<div class="change-content change02">
-					<ul>
-						<li class="ktcontent">
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-			<div class="content">
-				<div class="titlecont">Máy tính bảng</div>
-				<div class="c-nextprev">
-					<a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C03prev()"></i></a>
-					<a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C03next()"></i></a>
-				</div>
-				<div class="change-content change03">
-					<ul>
-						<li class="ktcontent">
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-
-			<div class="content">
-				<div class="titlecont">Âm thanh</div>
-				<div class="c-nextprev">
-					<a class="c-prev"><i class="fa-solid fa-chevron-left" onclick="C04prev()"></i></a>
-					<a class="c-next"><i class="fa-solid fa-chevron-right" onclick="C04next()"></i></a>
-				</div>
-				<div class="change-content change04">
-					<ul>
-						<li class="ktcontent">
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-01.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-02.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-03.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-04.png" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-05.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-						<li>
-							<img class="C-Slide" src="images/DienThoai/DT-noibat-pic-06.jpg" />
-							<div class="info">
-								<div class="name-info"><a href="">name</a></div>
-								<div class="cost">20.000.000 VNĐ</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
+			<!-- Pagination -->
+			<ul class="pagination">
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">
+						<i class="pagination-item__icon fa-solid fa-angle-left"></i>
+					</a>
+				</li>
+				<li class="pagination-item pagination-item--active">
+					<a href="" class="pagination-item__link">1</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">2</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">3</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">4</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">5</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">...</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">10</a>
+				</li>
+				<li class="pagination-item">
+					<a href="" class="pagination-item__link">
+						<i class="pagination-item__icon fa-solid fa-angle-right"></i>
+					</a>
+				</li>
+			</ul>
 		</div>
 
 		<div class="footer">
@@ -441,5 +480,4 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 	<script src="jsTCB.js"></script>
 </body>
-
 </html>
