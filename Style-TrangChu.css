@@ -16,7 +16,7 @@ a{
     margin: 0;
     padding:0;
     font-size: 15px;
-    height: 4500px;
+    height: 1500px;
 }
 @media all and (max-width: 600px){
     #wrapper{
@@ -154,7 +154,7 @@ a{
         margin:0 auto;
         padding:0;
         width: 100%;
-        height: 2500px;
+        height: 3500px;
     }
     .slide{
         width: 25em;
@@ -204,35 +204,37 @@ a{
         margin-bottom: 10em;
         overflow: hidden;
         position: relative;
-        top: 10em;
+        top: 20em;
         border: 1px solid black;
         padding-bottom: 1.5em;
         border-radius: 1em;
         box-shadow: 0.2em 0.2em dimgray;
     }
-    .change-content{
-        width: 750em;
-        transition: all 0.5s;
-    }
-    .change-content ul{
+    .content ul{
         list-style-type: none;
         margin:0;
-        padding: 0 3em;
+        padding: 0;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
     }
-    .change-content ul li{
-        float: left;
-        width: 15em;
-        margin: 0 3em 0 -1em;
+    .content ul li{
+        width: 10em;
+        margin: 1em;
         border: 1px solid black;
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
     }
-    .change-content ul li a{
+    .content ul li:nth-child(n+5){
+        display: none;
+    }
+    .content ul li a{
         text-transform: uppercase;
         color:black;
     }
-    .change-content .C-Slide{
-        width: 15em;
+    .content .C-Slide{
+        width: 10em;
         padding: 0.2em 0;
     }
     .info{
@@ -244,21 +246,11 @@ a{
     .info .name-info{
         height: 4em;
         overflow:hidden;
+        font-size: 10px;
     }
     .cost{
         font-weight: bold;
-    }
-    .c-nextprev{
-        position:absolute;
-        top: 12em;
-        width:100%;
-    }
-    .c-nextprev i{
-        font-size: 2em;
-        cursor: pointer;
-    }
-    .c-next{
-        float: right;
+        text-align: center;
     }
     .footer{
         width: 100%;
@@ -451,7 +443,7 @@ a{
         margin:0 auto;
         padding:0;
         width: 100%;
-        height: 7200px;
+        height: 4100px;
     }
     .slide{
         width: 50em;
@@ -507,32 +499,31 @@ a{
         border-radius: 1em;
         box-shadow: 0.2em 0.2em dimgray;
     }
-    .change-content{
-        width: 54em;
-        transition: all 0.5s;
-    }
-    .change-content ul{
+    .content ul{
         list-style-type: none;
         margin:0;
         padding: 0 3em;
         align-items: center;
         justify-content: space-between;
-        display: grid;
-        grid-template-columns: 50% 50%;
+        display: flex;
+        flex-wrap: wrap;
     }
-    .change-content ul li{
-        width: 15em;
-        margin: 0.5em 3em 0.5em 1em;
+    .content ul li{
+        width: 12em;
+        margin: 1em;
         border: 1px solid black;
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
     }
-    .change-content ul li a{
+    .content ul li:nth-child(n+7){
+        display: none;
+    }
+    .content ul li a{
         text-transform: uppercase;
         color:black;
     }
-    .change-content .C-Slide{
-        width: 15em;
+    .content .C-Slide{
+        width: 12em;
         padding: 0.2em 0;
     }
     .info{
@@ -544,13 +535,13 @@ a{
     .info .name-info{
         height: 4em;
         overflow:hidden;
+        font-size: 13px;
     }
     .cost{
         font-weight: bold;
+        text-align: center;
     }
-    .c-nextprev{
-        display: none;
-    }
+
     .footer{
         width: 100%;
         background-color:#0B0C10;
@@ -797,12 +788,7 @@ a{
     border-radius: 1em;
     box-shadow: 0.2em 0.2em dimgray;
 }
-.change-content{
-    width: 75em;
-    transition: all 0.5s;
-    
-}
-.change-content ul{
+.content ul{
     list-style-type: none;
     margin:0 auto;
     padding: 0 3em;
@@ -811,18 +797,21 @@ a{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
-.change-content ul li{
+.content ul li{
     width: 15em;
     margin: 0.5em 3em 0.5em 1em;
     border: 1px solid black;
     border-radius: 0.5em;
     box-shadow: 0.1em 0.1em dimgray;
 }
-.change-content ul li a{
+.content ul li:nth-child(n+7){
+    display:block;
+}
+.content ul li a{
     text-transform: uppercase;
     color:black;
 }
-.change-content .C-Slide{
+.content .C-Slide{
     width: 15em;
     padding: 0.2em 0;
 }
@@ -839,9 +828,7 @@ a{
 .cost{
     font-weight: bold;
 }
-.c-nextprev{
-    display:none;   
-}
+
 .footer{
     width: 100%;
     background-color:#0B0C10;

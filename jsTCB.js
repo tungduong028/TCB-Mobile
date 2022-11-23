@@ -16,8 +16,6 @@ $(document).ready(function () {
   })
 })
 
-
-
 function toggleActive(element) {
   element.classList.toggle('active')
 }
@@ -103,9 +101,22 @@ function login(e) {
     }
     else {
       alert("Đăng Nhập Thành Công")
-      window.location.href="Todo.html"
+      window.location.href = "Todo.html"
     }
   }
+}
+
+let perPage = 8;
+let currentPage = 1;
+let start = 0;
+let end = perPage;
+const totalPages = 2;
+const btnNext = document.querySelector('.btn-next');
+const btnPrev = document.querySelector('.btn-prev');
+
+function getCurrentPage(currentPage) {
+    start = (currentPage - 1) * perPage;
+    end = currentPage * perPage;
 }
 
 //Slide-gioithieu
@@ -125,61 +136,3 @@ function prev() {
   chuyenslide.style.marginLeft = '-' + chuyen + 'px';
 }
 setInterval(next, 3000);
-
-
-//Slide content
-//slide điện thoại
-var C_kichthuoc = document.getElementsByClassName("ktcontent")[0].clientWidth;
-var chuyencontent = document.getElementsByClassName("change-content")[0];
-// <<<<<<< HEAD
-var C_Max = 6 * C_kichthuoc - 4 * C_kichthuoc;
-// =======
-var C_Max = 8*C_kichthuoc;
-// >>>>>>> 752eeb88be6f56ddbb7de6236222bf4334a65c2d
-var chuyenC = 0;
-function Cnext() {
-  if (chuyenC < C_Max) chuyenC += C_kichthuoc;
-  else chuyenC = 0;
-  chuyencontent.style.marginLeft = '-' + chuyenC + 'px';
-}
-function Cprev() {
-  if (chuyenC == 0) chuyenC = C_Max;
-  else chuyenC -= C_kichthuoc;
-  chuyencontent.style.marginLeft = '-' + chuyenC + 'px';
-}
-//slide laptop
-var chuyencontent02 = document.getElementsByClassName("change02")[0];
-function C02next() {
-  if (chuyenC < C_Max) chuyenC += C_kichthuoc;
-  else chuyenC = 0;
-  chuyencontent02.style.marginLeft = '-' + chuyenC + 'px';
-}
-function C02prev() {
-  if (chuyenC == 0) chuyenC = C_Max;
-  else chuyenC -= C_kichthuoc;
-  chuyencontent02.style.marginLeft = '-' + chuyenC + 'px';
-}
-//slide máy tính bảng
-var chuyencontent03 = document.getElementsByClassName("change03")[0];
-function C03next() {
-  if (chuyenC < C_Max) chuyenC += C_kichthuoc;
-  else chuyenC = 0;
-  chuyencontent03.style.marginLeft = '-' + chuyenC + 'px';
-}
-function C03prev() {
-  if (chuyenC == 0) chuyenC = C_Max;
-  else chuyenC -= C_kichthuoc;
-  chuyencontent03.style.marginLeft = '-' + chuyenC + 'px';
-}
-//slide âm thanh
-var chuyencontent04 = document.getElementsByClassName("change04")[0];
-function C04next() {
-  if (chuyenC < C_Max) chuyenC += C_kichthuoc;
-  else chuyenC = 0;
-  chuyencontent04.style.marginLeft = '-' + chuyenC + 'px';
-}
-function C04prev() {
-  if (chuyenC == 0) chuyenC = C_Max;
-  else chuyenC -= C_kichthuoc;
-  chuyencontent04.style.marginLeft = '-' + chuyenC + 'px';
-}
