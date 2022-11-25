@@ -1,12 +1,12 @@
 const product03 = [
-    { id: 1, image: "images/DienThoai/DT-noibat-pic-01.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000", },
-    { id: 2, image: "images/DienThoai/DT-noibat-pic-02.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 3, image: "images/DienThoai/DT-noibat-pic-03.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 4, image: "images/DienThoai/DT-noibat-pic-04.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 5, image: "images/DienThoai/DT-noibat-pic-05.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 6, image: "images/DienThoai/DT-noibat-pic-06.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 7, image: "images/DienThoai/DT-noibat-pic-07.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 8, image: "images/DienThoai/DT-noibat-pic-08.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 1, image: "/images/DienThoai/DT-noibat-pic-01.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000", },
+    { id: 2, image: "/images/DienThoai/DT-noibat-pic-02.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 3, image: "/images/DienThoai/DT-noibat-pic-03.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 4, image: "/images/DienThoai/DT-noibat-pic-04.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 5, image: "/images/DienThoai/DT-noibat-pic-05.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 6, image: "/images/DienThoai/DT-noibat-pic-06.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 7, image: "/images/DienThoai/DT-noibat-pic-07.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
+    { id: 8, image: "/images/DienThoai/DT-noibat-pic-08.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
 ]
 const totalPage = 1;
 function renderProduct03() {
