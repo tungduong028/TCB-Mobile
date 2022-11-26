@@ -1,8 +1,8 @@
 <html>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" /> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
 	<link rel="stylesheet" href="/Css-TCB/Style-TrangChu.css">
 	<link rel="stylesheet" href="/Css-TCB/login.css">
 	<title>TCB mobile</title>
@@ -61,6 +61,10 @@
 							</ul>
 						</li>
 					</ul>
+					<div class="login-cart-menu-bars">
+						<a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -104,341 +108,72 @@
 			</form>
 		</div> -->
 
-
 		<div class="main">
-			<!-- Banner Image -->
-            <div class="container">
-				<a href="">
-                	<img src="/images/GioiThieu/Banner_iPhone_14.jpg" alt="">
-				</a>
-			</div>
-
-			<!-- Filter -->
-            <div class="container">
-                <div class="filter">
-                    <span class="filter__label">Hiển thị theo</span>
-
-                    <div class="select-input">
-                        <span class="select-input__label">Hãng</span>
-						<i class="fa-solid fa-angle-down"></i>
-
-						<!-- List options -->
-						<ul class="select-input__list">
-							<li class="select-input__item">
-								<a href="" class="select-input__link">Iphone</a>
-							</li>
-							<li>
-								<a href="" class="select-input__link">Samsung</a>
-							</li>
-							<li>
-								<a href="" class="select-input__link">Xiaomi</a>
-							</li>
-							<li>
-								<a href="" class="select-input__link">Oppo</a>
-							</li>
-							<li>
-								<a href="" class="select-input__link">Realme</a>
-							</li>
-						</ul>
-                    </div>
-
-					<div class="select-input">
-                        <span class="select-input__label">Giá</span>
-						<i class="fa-solid fa-angle-down"></i>
-
-						<!-- List options -->
-						<ul class="select-input__list">
-							<li class="select-input__item">
-								<a href="" class="select-input__link">Giá: Thấp đến cao</a>
-							</li>
-							<li>
-								<a href="" class="select-input__link">Giá: Cao đến thấp</a>
-							</li>
-						</ul>
-                    </div>
-
-					<div class="filter__page">
-						<span class="filter__page-num">
-							<span class="filter__page-current">1</span>/14
-						</span>
-
-						<div class="filter__page-control">
-							<a href="" class="filter__page-btn filter__page-btn--disabled">
-								<i class="filter__page-icon fa-solid fa-angle-left"></i>
-							</a>
-							<a href="" class="filter__page-btn">
-								<i class="filter__page-icon fa-solid fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-                </div>
-            </div>
-
-			<!-- List Product -->
-			<div class="product-grid">
-				<h2>Điện thoại</h2>
-				<div class="grid__row">
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="grid__column">
-						<a class="product-item" href="">
-							<div class="product-item__img" style="background-image: url(https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png);"></div>
-							<h4 class="product-item__name">Samsung Galaxy A73 5G - Chính hãng</h4>
-							<span class="product-item__price">11.990.000đ</span>
-							<div class="product-item__action">
-								<span class="product-item__label">Yêu thích</span>
-								<span class="product-item__like product-item__like--liked">
-									<i class="product-item__like-icon-empty fa-regular fa-heart"></i>
-									<i class="product-item__like-icon-fill fa-solid fa-heart"></i>
-								</span>
-							</div>
-						</a>
-					</div>
+			<div class="slide">
+				<div class="next-prev">
+					<a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
+					<a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
+				</div>
+				<div class="change-slide">
+					<img class="sli" src="/images/GioiThieu/slide-1.jpg" />
+					<img class="sli" src="/images/GioiThieu/slide-2.webp" />
+					<img class="sli" src="/images/GioiThieu/slide-3.png" />
+					<img class="sli" src="/images/GioiThieu/slide-4.png" />
 				</div>
 			</div>
 
-			<!-- Pagination -->
-			<ul class="pagination">
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">
-						<i class="pagination-item__icon fa-solid fa-angle-left"></i>
-					</a>
-				</li>
-				<li class="pagination-item pagination-item--active">
-					<a href="" class="pagination-item__link">1</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">2</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">3</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">4</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">5</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">...</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">10</a>
-				</li>
-				<li class="pagination-item">
-					<a href="" class="pagination-item__link">
-						<i class="pagination-item__icon fa-solid fa-angle-right"></i>
-					</a>
-				</li>
-			</ul>
+
+			<div class="content">
+				<div class="titlecont">Điện thoại</div>
+				<ul id="products">
+					<!-- <li>
+						<img class="C-Slide" src=" " />
+						<div class="info">
+							<div class="name-info"><a href=""> </a></div>
+							<div class="cost"> VNĐ</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+
+			<div class="content">
+				<div class="titlecont">laptop</div>
+				<ul id="products02">
+					<!-- <li>
+						<img class="C-Slide" src=" " />
+						<div class="info">
+							<div class="name-info"><a href=""> </a></div>
+							<div class="cost"> VNĐ</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+
+			<div class="content">
+				<div class="titlecont">Máy tính bảng</div>
+				<ul id="products03">
+					<!-- <li>
+						<img class="C-Slide" src=" " />
+						<div class="info">
+							<div class="name-info"><a href=""> </a></div>
+							<div class="cost"> VNĐ</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+
+			<div class="content">
+				<div class="titlecont">Âm thanh</div>
+				<ul id="products04">
+					<!-- <li>
+						<img class="C-Slide" src=" " />
+						<div class="info">
+							<div class="name-info"><a href=""> </a></div>
+							<div class="cost"> VNĐ</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
 		</div>
 
 		<div class="footer">
@@ -471,6 +206,11 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-	<script src="/JS-TCB/jsTCB.js"></script>
+	<script src="/JS-TCB/JS-Todo.js"></script>
+	<script src="/JS-TCB/DienThoai.js"></script>
+	<script src="/JS-TCB/Laptop.js"></script>
+	<script src="/JS-TCB/MayTinhBang.js"></script>
+	<script src="/JS-TCB/AmThanh.js"></script>
 </body>
+
 </html>
