@@ -17,7 +17,7 @@ productImage.src = product.image
 productTitle.innerText = product.title
 productPrice.innerText = product.p
 productDescription.innerText = product.description
-productPragraph.innerText = product.paragraph
+productParagraph.innerText = product.paragraph
 
 buttonAddToCard.addEventListener('click', () => {
     console.log("bought")

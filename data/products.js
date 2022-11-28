@@ -2,10 +2,10 @@ let products = [
     {
         "id": 0,
         "image": "/images/DienThoai/DT-noibat-pic-01.png",
-        "title": "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam",
-        "p": "20.000.000",
-        "description": "bo sung thong tin o day",
-        "paragraph": "cho nay nx ne",
+        "title": "iPhone 13 128GB | Chính hãng",
+        "p": "18.950.000 VND",
+        "description": "Đánh giá iPhone 13 - Flagship được mong chờ năm 2021",
+        "paragraph": "iPhone 13 sẽ có 4 phiên bản khác nhau và kích thước không đổi so với series iPhone 12 hiện tại. Nếu iPhone 12 có sự thay đổi trong thiết kế từ góc cạnh bo tròn (Thiết kế được duy trì từ thời iPhone 6 đến iPhone 11 Pro Max) sang thiết kế vuông vắn (đã từng có mặt trên iPhone 4 đến iPhone 5S, SE). Thì trên điện thoại iPhone 13 vẫn được duy trì một thiết kế tương tự. Máy vẫn có phiên bản khung viền thép, một số phiên bản khung nhôm cùng mặt lưng kính. Tương tự năm ngoái, Apple cũng sẽ cho ra mắt 4 phiên bản là iPhone 13, 13 mini, 13 Pro và 13 Pro Max.",
         "category": "dienthoai"
     },
     {
@@ -451,8 +451,8 @@ let products = [
     }
 ]
 
-const getProducts = ()=>{
-    return {products}
+const getProducts = () => {
+    return { products }
 }
 export {
     getProducts
