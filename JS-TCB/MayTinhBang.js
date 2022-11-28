@@ -1,33 +1,30 @@
-const product03 = [
-    { id: 1, image: "/images/DienThoai/DT-noibat-pic-01.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000", },
-    { id: 2, image: "/images/DienThoai/DT-noibat-pic-02.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 3, image: "/images/DienThoai/DT-noibat-pic-03.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 4, image: "/images/DienThoai/DT-noibat-pic-04.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 5, image: "/images/DienThoai/DT-noibat-pic-05.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 6, image: "/images/DienThoai/DT-noibat-pic-06.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 7, image: "/images/DienThoai/DT-noibat-pic-07.jpg", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-    { id: 8, image: "/images/DienThoai/DT-noibat-pic-08.png", title: "iMac 24 2021 M1 7GPU 8GB 256GB I Chính hãng Apple Việt Nam", p: "20.000.000" },
-]
-const totalPage = 1;
-function renderProduct03() {
-    html = '';
-    const content = product03.map((item, index) => {
+import { getProducts } from '../data/products.js    '
+
+let { products } = getProducts()
+
+products = products.filter (product => product.category == 'maytinhbang')
+
+function renderProduct() {
+    let html = '';
+    const content = products.map((item, index) => {
         if (index >= start && index < end) {
-            html += '<li>';
-            html += '<img class="C-Slide" src=' + item.image + '>';
-            html += '<div class="info">';
-            html += '<div class="name-info">';
-            html += '<a href="#">' + item.title + '</a>';
-            html += '</div>';
-            html += '<div class="cost">' + item.p + '</div>'
-            html += '</div>';
-            html += '</li>';
-            return html;
+            html += `
+                <li>
+                    <img class="C-Slide" src=${item.image}>
+                    <div class="info">
+                    <div class="name-info">
+                        <a href="/sanpham.html?id=${item.id}"> ${item.title} </a>
+                    </div>
+                    <div class="cost">${item.p}</div>
+                    </div>
+                </li>
+            `
         }
     })
     document.getElementById('products03').innerHTML = html;
 }
-renderProduct03();
+renderProduct();
+
 
 function changePage03() {
     const currentPages = document.querySelectorAll('.number-page li');
