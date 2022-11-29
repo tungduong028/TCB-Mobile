@@ -26,32 +26,32 @@ function renderProduct() {
 renderProduct();
 
 
-function changePage03() {
-    const currentPages = document.querySelectorAll('.number-page li');
-    for (let i = 0; i < currentPages.length; i++) {
-        currentPages[i].addEventListener('click', () => {
-            let value = i + 1;
-            currentPage = value;
-            getCurrentPage(currentPage);
-            renderProduct03();
-        })
-    }
-}
-changePage03();
+// function changePage03() {
+//     const currentPages = document.querySelectorAll('.number-page li');
+//     for (let i = 0; i < currentPages.length; i++) {
+//         currentPages[i].addEventListener('click', () => {
+//             let value = i + 1;
+//             currentPage = value;
+//             getCurrentPage(currentPage);
+//             renderProduct03();
+//         })
+//     }
+// }
+// changePage03();
 
-btnNext.addEventListener('click', () => {
-    currentPage++;
-    if (currentPage > totalPage) {
-        currentPage = totalPage;
-    }
-    getCurrentPage(currentPage);
-    renderProduct03();
-})
-btnPrev.addEventListener('click', () => {
-    currentPage--;
-    if (currentPage <= 1) {
-        currentPage = 1;
-    }
-    getCurrentPage(currentPage);
-    renderProduct03();
-})
+// btnNext.addEventListener('click', () => {
+//     currentPage++;
+//     if (currentPage > totalPage) {
+//         currentPage = totalPage;
+//     }
+//     getCurrentPage(currentPage);
+//     renderProduct03();
+// })
+// btnPrev.addEventListener('click', () => {
+//     currentPage--;
+//     if (currentPage <= 1) {
+//         currentPage = 1;
+//     }
+//     getCurrentPage(currentPage);
+//     renderProduct03();
+// })
