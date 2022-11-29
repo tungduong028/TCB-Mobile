@@ -1,4 +1,5 @@
 import { getProducts } from './data/products.js'
+import { addProductToCart, getCart } from './cart.js'
 const productId = new URLSearchParams(window.location.search).get('id')
 
 let { products } = getProducts()
@@ -21,6 +22,12 @@ productParagraph.innerText = product.paragraph
 
 buttonAddToCard.addEventListener('click', () => {
     console.log("bought")
-    alert("234213")
-    // addProductToCart(product)
+    addProductToCart(product)
+    console.log(getCart())
+    alert("Đã thêm vô giỏ hàng !")
+})
+
+buttonBuy.addEventListener('click', () => {
+    addProductToCart(product)
+    window.location.href = '/cart.html'
 })

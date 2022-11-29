@@ -7,7 +7,7 @@ products = products.filter (product => product.category == 'amthanh')
 function renderProduct() {
     let html = '';
     const content = products.map((item, index) => {
-        if (index >= start && index < end) {
+        // if (index >= start && index < end) {
             html += `
                 <li>
                     <img class="C-Slide" src=${item.image}>
@@ -19,7 +19,7 @@ function renderProduct() {
                     </div>
                 </li>
             `
-        }
+        // }
     })
     document.getElementById('products04').innerHTML = html;
 }
