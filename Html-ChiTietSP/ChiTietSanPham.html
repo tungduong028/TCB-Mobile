@@ -13,61 +13,52 @@
 	<div id="wrapper">
 		<div id="header">
 			<div class="header-top">
-				<a class="logo" href="/TrangChu.html">
-					<img src="/images/Logo/LOGO-TCB.png">
-				</a>
+				<img src="/images/Logo/LOGO-TCB.png" class="logo">
 				<form action="" class="search-box">
-					<input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
+					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="search()">
 					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div id="searchProduct"></div>
 				</form>
 				<div class="login-cart">
 					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
 					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
 				</div>
 			</div>
-			<div class="header-bot">
-				<div class="menu-bars">
-					<img src="/images/Logo/LOGO-TCB.png" class="logo">
-					<div onclick="hamDropdown()" class="icon-bars"><i class="fa-solid fa-bars"></i></div>
-				</div>
-				<div class="menu">
-					<form action="" class="search-box inmenu">
-						<input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
-						<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-					</form>
-					<ul>
-						<li><a href="/Html-DanhSachSP/DienThoai.html">Điện thoại</a>
-							<ul class="sub-menu">
-								<li><a href="#">Iphone</a></li>
-								<li><a href="#">Samsung</a></li>
-								<li><a href="#">Xiaomi</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/Laptop.html">Laptop</a>
-							<ul class="sub-menu">
-								<li><a href="#">Macbook</a></li>
-								<li><a href="#">Asus</a></li>
-								<li><a href="#">Acer</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/MayTinhBang.html">Máy tính bảng</a>
-							<ul class="sub-menu">
-								<li><a href="#">Ipad</a></li>
-								<li><a href="#">Samsung</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/AmThanh.html">Âm thanh</a>
-							<ul class="sub-menu">
-								<li><a href="#">Tai nghe có dây</a></li>
-								<li><a href="#">Tai nghe Bluetooth</a></li>
-								<li><a href="#">Loa</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</div>
-
+		<div class="header-bot">
+			<div class="menu">
+				<ul>
+					<li><a href="/Html-DanhSachSP/DienThoai.html">Điện thoại</a>
+						<ul class="sub-menu">
+							<li><a href="#">Iphone</a></li>
+							<li><a href="#">Samsung</a></li>
+							<li><a href="#">Xiaomi</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/Laptop.html">Laptop</a>
+						<ul class="sub-menu">
+							<li><a href="#">Macbook</a></li>
+							<li><a href="#">Asus</a></li>
+							<li><a href="#">Acer</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/MayTinhBang.html">Máy tính bảng</a>
+						<ul class="sub-menu">
+							<li><a href="#">Ipad</a></li>
+							<li><a href="#">Samsung</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/AmThanh.html">Âm thanh</a>
+						<ul class="sub-menu">
+							<li><a href="#">Tai nghe có dây</a></li>
+							<li><a href="#">Tai nghe Bluetooth</a></li>
+							<li><a href="#">Loa</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<img class="image" src="/images/GioiThieu/slide04.jpg" />
+		</div>
 		<div class="login-layout">
 			<form class="form-login" onsubmit="login()">
 				<a id="close-login-layout" href="#" style="color: red;">X</a>

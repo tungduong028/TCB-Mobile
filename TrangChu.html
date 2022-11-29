@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
@@ -14,57 +13,58 @@
 			<div class="header-top">
 				<img src="/images/Logo/LOGO-TCB.png" class="logo">
 				<form action="" class="search-box">
-					<input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
+					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="search()">
 					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div id="searchProduct"></div>
 				</form>
 				<div class="login-cart">
 					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
 					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
 				</div>
 			</div>
-			<div class="header-bot">
-				<div class="menu-bars">
-					<img src="/images/Logo/LOGO-TCB.png" class="logo">
-					<div onclick="hamDropdown()" class="icon-bars"><i class="fa-solid fa-bars"></i></div>
+		</div>
+		<div class="header-bot">
+			<div class="menu">
+				<ul>
+					<li><a href="/Html-DanhSachSP/DienThoai.html">Điện thoại</a>
+						<ul class="sub-menu">
+							<li><a href="#">Iphone</a></li>
+							<li><a href="#">Samsung</a></li>
+							<li><a href="#">Xiaomi</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/Laptop.html">Laptop</a>
+						<ul class="sub-menu">
+							<li><a href="#">Macbook</a></li>
+							<li><a href="#">Asus</a></li>
+							<li><a href="#">Acer</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/MayTinhBang.html">Máy tính bảng</a>
+						<ul class="sub-menu">
+							<li><a href="#">Ipad</a></li>
+							<li><a href="#">Samsung</a></li>
+						</ul>
+					</li>
+					<li><a href="/Html-DanhSachSP/AmThanh.html">Âm thanh</a>
+						<ul class="sub-menu">
+							<li><a href="#">Tai nghe có dây</a></li>
+							<li><a href="#">Tai nghe Bluetooth</a></li>
+							<li><a href="#">Loa</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<div class="next-prev">
+					<a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
+					<a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
 				</div>
-				<div class="menu">
-					<form action="" class="search-box inmenu">
-						<input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
-						<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-					</form>
-					<ul>
-						<li><a href="/Html-DanhSachSP/DienThoai.html">Điện thoại</a>
-							<ul class="sub-menu">
-								<li><a href="#">Iphone</a></li>
-								<li><a href="#">Samsung</a></li>
-								<li><a href="#">Xiaomi</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/Laptop.html">Laptop</a>
-							<ul class="sub-menu">
-								<li><a href="#">Macbook</a></li>
-								<li><a href="#">Asus</a></li>
-								<li><a href="#">Acer</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/MayTinhBang.html">Máy tính bảng</a>
-							<ul class="sub-menu">
-								<li><a href="#">Ipad</a></li>
-								<li><a href="#">Samsung</a></li>
-							</ul>
-						</li>
-						<li><a href="/Html-DanhSachSP/AmThanh.html">Âm thanh</a>
-							<ul class="sub-menu">
-								<li><a href="#">Tai nghe có dây</a></li>
-								<li><a href="#">Tai nghe Bluetooth</a></li>
-								<li><a href="#">Loa</a></li>
-							</ul>
-						</li>
-					</ul>
-					<div class="login-cart-menu-bars">
-						<a href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
-						<a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
-					</div>
+				<div class="change-slide">
+					<img class="sli" src="/images/GioiThieu/slide01.jpg" />
+					<img class="sli" src="/images/GioiThieu/slide02.jpg" />
+					<img class="sli" src="/images/GioiThieu/slide03.png" />
+					<img class="sli" src="/images/GioiThieu/slide04.jpg" />
 				</div>
 			</div>
 		</div>
@@ -109,20 +109,6 @@
 		</div>
 
 		<div class="main">
-			<div class="slide">
-				<div class="next-prev">
-					<a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
-					<a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
-				</div>
-				<div class="change-slide">
-					<img class="sli" src="/images/GioiThieu/slide-1.jpg" />
-					<img class="sli" src="/images/GioiThieu/slide-2.webp" />
-					<img class="sli" src="/images/GioiThieu/slide-3.png" />
-					<img class="sli" src="/images/GioiThieu/slide-4.png" />
-				</div>
-			</div>
-
-
 			<div class="content">
 				<div class="titlecont">Điện thoại</div>
 				<ul id="products">

@@ -1,20 +1,3 @@
-//menu icon-bars
-function hamDropdown() {
-  document.querySelector(".menu").classList.toggle("hienThi");
-}
-
-//cuộn và ẩn header-top
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop()) {
-      $('.header-top').addClass('none');
-    }
-    else {
-      $('.header-top').removeClass('none');
-    }
-
-  })
-})
 
 function toggleActive(element) {
   element.classList.toggle('active')
@@ -99,13 +82,28 @@ function login(e) {
     else if (username === data.username && password != data.password) {
       alert("Sai Mật Khẩu")
     }
+    else if (username === "admin" && password === "admin"){
+      alert("Đăng Nhập Thành Công")
+      window.location.href = "Admin.html"
+    }
     else {
       alert("Đăng Nhập Thành Công")
       window.location.href = "Todo.html"
     }
   }
 }
-
+// function searchSanPham() {
+//     let valueSearchInput = document.getElementById('search').value
+//     let Search = product.filter((item, index) => {
+//         return item.title.toUpperCase().includes(valueSearchInput.toUpperCase())
+//     })
+//     if(valueSearchInput !== ''){
+//         renderProduct02(Search)
+//     }
+//     else{
+//         renderProduct02(none)
+//     }
+// }
 let perPage = 8;
 let currentPage = 1;
 let start = 0;
@@ -135,4 +133,4 @@ function prev() {
   else chuyen -= kichthuoc;
   chuyenslide.style.marginLeft = '-' + chuyen + 'px';
 }
-setInterval(next, 3000);
+setInterval(next, 4000);
