@@ -1,15 +1,14 @@
-
 function toggleActive(element) {
-  element.classList.toggle('active')
+	element.classList.toggle('active')
 }
 const loginButton = document.querySelector("#login-button")
 const loginLayout = document.querySelector("#wrapper > div.login-layout")
 const loginClose = document.querySelector('#close-login-layout')
 loginButton.addEventListener('click', () => {
-  toggleActive(loginLayout)
+	toggleActive(loginLayout)
 })
 loginClose.addEventListener('click', () => {
-  toggleActive(loginLayout)
+	toggleActive(loginLayout)
 })
 
 const signup = document.querySelector("#sign-up")
@@ -18,79 +17,125 @@ const signupClose = document.querySelector('#close-signup-layout')
 const comebackLogin = document.querySelector('#comeback-login')
 
 signup.addEventListener('click', () => {
-  toggleActive(signupLayout)
-  toggleActive(loginLayout)
+	toggleActive(signupLayout)
+	toggleActive(loginLayout)
 })
 signupClose.addEventListener('click', () => {
-  toggleActive(signupLayout)
+	toggleActive(signupLayout)
 })
 comebackLogin.addEventListener('click', () => {
-  toggleActive(signupLayout)
-  toggleActive(loginLayout)
+	toggleActive(signupLayout)
+	toggleActive(loginLayout)
 })
 
 const signupButton = document.querySelector("#signup-button")
 signupButton.addEventListener('click', () => {
-  toggleActive(signupLayout)
+	toggleActive(signupLayout)
 })
 
-function setSignup(e) {
-  event.preventDefault();
-  var username = document.getElementById("username").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var password = document.getElementById("password").value;
-  console.log(password);
-  var confirmpass = document.getElementById("confirmpass").value;
-  if (username === "" || email === "" || phone === "" || password === "" || confirmpass === "") {
-    alert("Vui lòng điền đầy đủ các phần còn trống")
-  }
-  else if (password != confirmpass) {
-    alert("Mật Khẩu không khớp!")
-  }
-  else {
-    var user = {
-      "username": username,
-      "email": email,
-      "phone": phone,
-      "password": password,
-    }
-    localStorage.setItem(username, JSON.stringify(user));
-    alert("đăng ký thành công");
-  }
+// lấy toàn bộ danh sách account
+const getAccountList = () => {
+	let accountList = []
+	if (localStorage.getItem('AccountList') == null) {
+		localStorage.setItem('AccountList', JSON.stringify(accountList))
+	}
+	accountList = JSON.parse(localStorage.getItem('AccountList'))
+	return accountList
 }
 
-function login(e) {
-  event.preventDefault();
-  var username = document.getElementById("usernamelogin").value;
-  var password = document.getElementById("passwordlogin").value;
-  var user = localStorage.getItem(username);
-  var data = JSON.parse(user);
-  if (password === "" && username === "") {
-    alert("Vui Lòng Nhập Tên Đăng Nhập và Mật Khẩu")
-  }
-  else if (user == null) {
-    alert("Tài khoản không tồn tại!")
-  }
-  else {
-    if (username != "" && password === "") {
-      alert("Vui Lòng Nhập Mật Khẩu")
-    }
-    else if (password != "" && username === "") {
-      alert("Vui Lòng Nhập Tên Đăng Nhập")
-    }
-    else if (username === data.username && password != data.password) {
-      alert("Sai Mật Khẩu")
-    }
-    else if (username === "admin" && password === "admin"){
-      alert("Đăng Nhập Thành Công")
-      window.location.href = "Admin.html"
-    }
-    else {
-      alert("Đăng Nhập Thành Công")
-      window.location.href = "Todo.html"
-    }
-  }
+const getCurrentAccount = () => {
+	let currentAccount = {}
+	// check key currentAccount có tồn tại trong localStorage không
+	if (localStorage.getItem('currentAccount') == null) {
+		// tạo trường cho currentAccount
+		localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
+	}
+	currentAccount = JSON.parse(localStorage.getItem('currentAccount'))
+	return currentAccount
+}
+const getAccountByUsername = (username) => {
+	let accountList = getAccountList()
+	return accountList.filter(value => value.username == username)[0]
+}
+const login = (username, password) => {
+	let accountList = getAccountList()
+	let currentAccount = accountList.find(value => value.username == username && value.password == password)
+	if (currentAccount == undefined) {
+		return false
+	}
+	localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
+	return true
+}
+
+const register = (account) => {
+	if (account == undefined) return false
+	let accountList = getAccountList()
+	if (getAccountByUsername(account.username)) {
+		return false
+	}
+	accountList.push(account)
+	localStorage.setItem('AccountList', JSON.stringify(accountList))
+	return true
+}
+// công khai hàm cho web sử dụng
+const formRegister = (e) => {
+	event.preventDefault()
+	let username = document.getElementById("username").value;
+	let email = document.getElementById("email").value;
+	let phone = document.getElementById("phone").value;
+	let password = document.getElementById("password").value;
+	var confirmPass = document.getElementById("confirmpass").value;
+	if (password != confirmPass) {
+		alert("Mật khẩu xác nhận không khớp !")
+		return false
+	}
+	const account = {
+		"username": username,
+		"email": email,
+		"phone": phone,
+		"password": password
+	}
+	if (register(account)) {
+		alert("Thành công đăng ký !")
+	} else {
+		alert("Đăng ký thất bại!")
+	}
+}
+const formLogin = () => {
+	event.preventDefault()
+	const username = document.querySelector('#usernamelogin').value
+	const password = document.querySelector('#passwordlogin').value
+	console.log(username, password)
+	if (login(username, password)) {
+		alert("Đăng nhập thành công!")
+		window.location.href = "TrangChu.html"
+	} else {
+		alert("Đăng nhập thất bại !")
+	}
+}
+
+const logoutAccount = () => {
+	localStorage.setItem('currentAccount', JSON.stringify({}))
+	alert("Đã đăng xuất !")
+	window.location.href = "TrangChu.html"
+}
+
+window.formRegister = formRegister
+window.formLogin = formLogin
+window.logoutAccount = logoutAccount
+
+window.onload = () => {
+	if (getCurrentAccount().username != undefined) {
+		const loginCart = document.querySelector('.login-cart')
+		loginCart.innerHTML = `
+		<a href="#"><i class="fa-solid fa-user"></i>Tài Khoản</a>
+		<ul class="usermenu">
+			<li><a href="#">Thông Tin Tài Khoản</a></li>
+			<li><a id ="logout" href="#" onclick="logoutAccount()">Đăng Xuất</a></li>
+		</ul>
+		<a href="#" ><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+		`
+	}
 }
 // function searchSanPham() {
 //     let valueSearchInput = document.getElementById('search').value
