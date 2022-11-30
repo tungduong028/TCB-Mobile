@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
-	<link rel="stylesheet" href="/Css-TCB/Style-TrangChu.css">
+	<link rel="stylesheet" href="/Css-TCB/admin.css">
 	<link rel="stylesheet" href="/Css-TCB/login.css">
 	<title>TCB mobile</title>
 </head>
@@ -13,103 +13,62 @@
 			<div class="header-top">
 				<img src="/images/Logo/LOGO-TCB.png" class="logo">
 				<form action="" class="search-box">
-					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="search()">
+					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="">
 					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-					<div id="searchProduct"></div>
+					<ul id="searchProduct">
+
+					</ul>
 				</form>
 				<div class="login-cart">
-					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Admin</a>
-					<a style="display: none" id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
 				</div>
 			</div>
-		</div>
-		<div class="header-bot">
-			<div class="menu">
-				<ul>
-					<li><a href="/Html-DanhSachSP/DienThoai.html">Điện thoại</a>
-						<ul class="sub-menu">
-							<li><a href="#">Iphone</a></li>
-							<li><a href="#">Samsung</a></li>
-							<li><a href="#">Xiaomi</a></li>
-						</ul>
-					</li>
-					<li><a href="/Html-DanhSachSP/Laptop.html">Laptop</a>
-						<ul class="sub-menu">
-							<li><a href="#">Macbook</a></li>
-							<li><a href="#">Asus</a></li>
-							<li><a href="#">Acer</a></li>
-						</ul>
-					</li>
-					<li><a href="/Html-DanhSachSP/MayTinhBang.html">Máy tính bảng</a>
-						<ul class="sub-menu">
-							<li><a href="#">Ipad</a></li>
-							<li><a href="#">Samsung</a></li>
-						</ul>
-					</li>
-					<li><a href="/Html-DanhSachSP/AmThanh.html">Âm thanh</a>
-						<ul class="sub-menu">
-							<li><a href="#">Tai nghe có dây</a></li>
-							<li><a href="#">Tai nghe Bluetooth</a></li>
-							<li><a href="#">Loa</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="slide">
-				<div class="next-prev">
-					<a class="prev"><i class="fa-solid fa-chevron-left" onclick="prev()"></i></a>
-					<a class="next"><i class="fa-solid fa-chevron-right" onclick="next()"></i></a>
-				</div>
-				<div class="change-slide">
-					<img class="sli" src="/images/GioiThieu/slide01.jpg" />
-					<img class="sli" src="/images/GioiThieu/slide02.jpg" />
-					<img class="sli" src="/images/GioiThieu/slide03.png" />
-					<img class="sli" src="/images/GioiThieu/slide04.jpg" />
-				</div>
-			</div>
-		</div>
-
-		<div class="login-layout">
-			<form class="form-login" onsubmit="login()">
-				<a id="close-login-layout" href="#" style="color: red;">X</a>
-				<h1 class="form-heading">Đăng Nhập Tài Khoản TCB</h1>
-				<div class="form-group">
-					<input type="text" id="usernamelogin" placeholder="Tên đăng nhập">
-					<input type="password" id="passwordlogin" placeholder="Mật Khẩu">
-					<p><a href="#">Quên mật khẩu?</a></p>
-					<input type="submit" value="Đăng Nhập" id="submit">
-				</div>
-				<div class="form-question">Bạn chưa có tài khoản?<a href="#" id="sign-up" style="font-style: italic;">
-						Đăng ký ngay!</a></div>
-			</form>
-		</div>
-
-		<div class="sign-up-layout">
-			<form class="form-signup" onsubmit="setSignup()">
-				<div class="tab-signup">
-					<a id="close-signup-layout" href="#" style="color: white"><i
-							class="fa-sharp fa-solid fa-circle-xmark"></i></a>
-				</div>
-				<div class="logosignup">
-					<img src="/images/Logo/LOGO-TCB.png" class="logo">
-				</div>
-				<h1 class="form-heading">Đăng Ký Tài Khoản TCB</h1>
-				<div class="signup-group">
-					<input type="text" id="username" placeholder="Nhập Tên Đăng Nhập">
-					<input type="email" id="email" placeholder="Nhập Địa Chỉ Mail">
-					<input type="tel" id="phone" placeholder="Nhập Số Điện Thoại">
-					<input type="password" id="password" placeholder="Nhập Mật Khẩu Của Bạn">
-					<input type="password" id="confirmpass" placeholder="Xác nhận Mật Khẩu">
-					<input type="submit" value="Đăng Ký" id="submit">
-				</div>
-				<div class="form-question">Bạn đã có tài khoản?<a href="#" id="comeback-login"
-						style="font-style: italic;">
-						Đăng nhập ngay!</a></div>
-			</form>
 		</div>
 
 		<div class="main">
-			
+            <div class="container">
+                <div class="input">
+                    <div class="input-information">
+                        <label for="">ID</label>
+                        <input type="text" id="id">
+                    </div>
+                    <div class="input-information">
+                        <label for="">URL Image</label>
+                        <input type="text" id="image">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Title</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Price</label>
+                        <input type="text" id="p">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Description</label>
+                        <input type="text" id="description">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Paragraph</label>
+                        <input type="text" id="paragraph">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Category</label>
+                        <input type="text" id="category">
+                    </div>
+                    <div class="input-information">
+                        <label for="">Sub-category</label>
+                        <input type="text" id="sub-category">
+                    </div>
+                    <div id="btnAd">
+                        <button class="btnadd">Submit</button>
+                    </div>
+                </div>
+				<ul id="addProduct">
+
+				</ul>
+            </div>
 		</div>
 
 		<div class="footer">
@@ -142,11 +101,7 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-	<script src="/JS-TCB/jsTCB.js"></script>
-	<script type="module" src="/JS-TCB/DienThoai.js"></script>
-	<script type="module" src="/JS-TCB/Laptop.js"></script>
-	<script type="module" src="/JS-TCB/MayTinhBang.js"></script>
-	<script type="module" src="/JS-TCB/AmThanh.js"></script>
+	<script type="module" src="/JS-TCB/admin.js"></script>
 </body>
 
 </html>

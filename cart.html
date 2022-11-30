@@ -2,34 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css-TCB/Style-ChiTietSanPham.css">
-    <link rel="stylesheet" href="/Css-TCB/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+	<link rel="stylesheet" href="/Css-TCB/Style-ChiTietSanPham.css">
+	<link rel="stylesheet" href="/Css-TCB/login.css">
     <link rel="stylesheet" href="/Css-TCB/cart.css">
-    <script type="module" src="./sanpham.js"></script>
-    <script type="module" src="./cart.js"></script>
+    
     <title>TCB mobile - Giỏ hàng</title>
 </head>
 
 <body>
     <div id="wrapper">
         <div id="header">
-            <div class="header-top">
-                <a class="logo" href="/TrangChu.html">
-                    <img src="/images/Logo/LOGO-TCB.png">
-                </a>
-                <form action="" class="search-box">
-                    <input type="text" placeholder="Bạn muốn tìm gì ?" class="search-text">
-                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-                <div class="login-cart">
-                    <a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
-                    <a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
-                </div>
-            </div>
-        </div>
+			<div class="header-top">
+				<img src="/images/Logo/LOGO-TCB.png" class="logo">
+				<form action="" class="search-box">
+					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="">
+					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<ul id="searchProduct">
+					</ul>
+				</form>
+				<div class="login-cart">
+					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+				</div>
+			</div>
+		</div>
         <div class="cart">
             <table>
                 <thead>
@@ -55,7 +53,9 @@
             </table>
         </div>
     </div>
+    <script type="module" src="./sanpham.js"></script>
+    <script type="module" src="./cart.js"></script>
 </body>
-</body>
+
 
 </html>
