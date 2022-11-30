@@ -24,7 +24,6 @@ function renderProduct() {
     document.getElementById('products').innerHTML = html;
 }
 renderProduct();
-
 // function changePage() {
 //     const currentPages = document.querySelectorAll('.number-page li');
 //     for (let i = 0; i < currentPages.length; i++) {

@@ -39,8 +39,8 @@ a {
     }
 
     .logo {
-        width: 5em;
-        height: 4em;
+        width: 4em;
+        height: 3em;
         margin: auto 5%;
     }
 
@@ -87,7 +87,7 @@ a {
     .login-cart a {
         color: #fff;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 8px;
         display: block;
         margin: 1em;
     }

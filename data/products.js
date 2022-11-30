@@ -282,7 +282,7 @@ let products = [
     {
         "id": 28,
         "image": "/images/Laptop/acer_aspire7_a715-43g-r8ga.png",
-        "title": "Laptop Acer Gaming Aspire 7 A715-43G-R8GA NH.QHDSV.002Nhập tên sản phẩm",
+        "title": "Laptop Acer Gaming Aspire 7 A715-43G-R8GA NH.QHDSV.002",
         "p": "19.090.000",
         "description": "Laptop Gaming Acer Aspire 7 A715-43G-R8GA: Laptop gaming, hiệu năng mạnh mẽ",
         "paragraph": "Laptop gaming Acer Aspire 7 A715-43G-R8GA với hiệu năng mạnh mẽ cùng thiết kế phong cách, hứa hẹn mang lại cho người dùng trải nghiệm làm việc và gaming mượt mà.",

@@ -72,14 +72,6 @@ a {
         cursor: pointer;
     }
 
-    #searchProduct {
-        width: 15.5em;
-        position: absolute;
-        top: 3em;
-        height: 10em;
-        position: fixed;
-    }
-
     .login-cart {
         margin: auto 3%;
     }
@@ -87,9 +79,9 @@ a {
     .login-cart a {
         color: #fff;
         text-decoration: none;
-        font-size: 10px;
+        font-size: 8px;
         display: block;
-        margin: 1em;
+        margin: 0.5em;
     }
 
     .header-bot {
@@ -98,7 +90,7 @@ a {
     }
 
     .menu {
-        margin: 5em 0.5em;
+        margin: 8em 0.5em;
         z-index: 100;
     }
 
@@ -162,7 +154,7 @@ a {
         width: 25em;
         height: 10em;
         overflow: hidden;
-        margin: 7em auto;
+        margin: 9em auto;
         border-radius: 1em;
     }
 
@@ -192,7 +184,35 @@ a {
     .next {
         float: right;
     }
-
+    #searchProduct{
+        position: fixed;
+        width: 15em;
+        overflow: scroll;
+        position: absolute;
+        top: 4em;
+        height: 20em;
+        padding: 0;
+        margin: 0;
+    }
+    #searchProduct li{
+        width: 13em;
+        margin: 0.5em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+        display: flex;
+        background-color: aliceblue;
+    }
+    #searchProduct li .C-Slide{
+        width: 8em;
+        border-radius: 1em;
+    }
+    #searchProduct li .info .cost{
+        padding: 0;
+    }
+    #searchProduct li a{
+        color: black;
+    }
     .main {
         margin: 0 auto;
         padding: 0;
@@ -404,15 +424,6 @@ a {
         border-radius: 0 1em 1em 0;
         cursor: pointer;
     }
-
-    #searchProduct {
-        width: 20em;
-        position: absolute;
-        top: 3.4em;
-        height: 10em;
-        position: fixed;
-    }
-
     .login-cart {
         margin: auto 5%;
     }
@@ -525,7 +536,32 @@ a {
     .next {
         float: right;
     }
-
+    #searchProduct{
+        position: fixed;
+        width: 20em;
+        overflow: scroll;
+        position: absolute;
+        top: 4em;
+        height: 20em;
+        padding: 0;
+        margin: 0;
+    }
+    #searchProduct li{
+        width: 18em;
+        margin: 0.5em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+        display: flex;
+        background-color: aliceblue;
+    }
+    #searchProduct li .C-Slide{
+        width: 8em;
+        border-radius: 1em;
+    }
+    #searchProduct li a{
+        color: black;
+    }
     .main {
         margin: 0 auto;
         padding: 0;
@@ -853,7 +889,29 @@ a {
     .next {
         float: right;
     }
-
+    #searchProduct{
+        width: 29em;
+        overflow: scroll;
+        height: 20em;
+        padding: 0;
+        margin: 0;
+    }
+    #searchProduct li{
+        width: 27em;
+        margin: 0.5em;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em dimgray;
+        display: flex;
+        background-color: aliceblue;
+    }
+    #searchProduct li .C-Slide{
+        width: 8em;
+        border-radius: 1em;
+    }
+    #searchProduct li a{
+        color: black;
+    }
     .main {
         margin: 0 auto;
         padding: 0;

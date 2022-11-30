@@ -1,4 +1,8 @@
 import { formRegister, formLogin, logoutAccount, onloadShowMenuLogin } from '../account.js'
+import { getProducts } from '../data/products.js'
+let { products } = getProducts()
+
+products = products.filter (product => product.category)
 
 window.formRegister = formRegister
 window.formLogin = formLogin
@@ -42,19 +46,49 @@ signupButton.addEventListener('click', () => {
 	toggleActive(signupLayout)
 })
 
-
-// function searchSanPham() {
-//     let valueSearchInput = document.getElementById('search').value
-//     let Search = product.filter((item, index) => {
-//         return item.title.toUpperCase().includes(valueSearchInput.toUpperCase())
-//     })
-//     if(valueSearchInput !== ''){
-//         renderProduct02(Search)
-//     }
-//     else{
-//         renderProduct02(none)
-//     }
-// }
+//tìm kiếm sản phẩm
+function renderProduct() {
+    let html = '';
+    const content = products.map((item, index) => {
+        // if (index >= start && index < end) {
+            html += `
+                <li>
+                    <img class="C-Slide" src=${item.image}>
+                    <div class="info">
+                    <div class="name-info">
+                        <a href="/sanpham.html?id=${item.id}"> ${item.title} </a>
+                    </div>
+                    <div class="cost">${item.p}</div>
+                    </div>
+                </li>
+            `
+        // }
+    })
+    document.getElementById('searchProduct').innerHTML = html;
+}
+var input = document.getElementById("search");
+function myFunction() {
+    renderProduct();
+	var filter, ul, li, a, i;
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("searchProduct");
+	li = ul.getElementsByTagName("li");
+	if (!filter) {
+	  ul.style.display = "none";
+	}else{
+	  for (i = 0; i < li.length; i++) {
+		  a = li[i].getElementsByTagName("a")[0];
+		  if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			  ul.style.display = "block";
+			  li[i].style.display = "";
+		  } else {
+			  li[i].style.display = "none";
+		  }
+	  }
+	}
+}
+input.addEventListener("keyup", myFunction);
+//---------------------------------------------
 let perPage = 8;
 let currentPage = 1;
 let start = 0;
