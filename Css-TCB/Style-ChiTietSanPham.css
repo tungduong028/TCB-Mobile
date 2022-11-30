@@ -364,6 +364,10 @@ a {
         margin: auto 5%;
     }
 
+    .logo img {
+        width: 100%;
+    }
+
     .search-box {
         width: 20em;
         height: 1.8em;
@@ -501,6 +505,7 @@ a {
     }
 
     .product-detail {
+        margin-top: 90px;
         margin-bottom: 24px;
         padding: 24px;
         box-sizing: border-box;

@@ -1,0 +1,16 @@
+.cart {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart table {
+    width: min(100%, 1200px);
+}
+
+.cart table tr {
+    overflow: hidden;
+    height: 50px;
+}
+
+

@@ -13,6 +13,7 @@ body {
     background-color: #151414a0;
     z-index: 1000;
     visibility: hidden;
+    top: 0;
 }
 
 .login-layout.active {
@@ -95,6 +96,7 @@ body {
     background-color: #151414a0;
     z-index: 1000;
     visibility: hidden;
+    top: 0;
 }
 
 .sign-up-layout.active {
@@ -104,7 +106,7 @@ body {
 .form-signup {
 
     height: 74%;
-    width: 30%;
+    width: min(100%, 550px);
     background-color: white;
     position: relative;
 }
@@ -160,4 +162,39 @@ body {
 .tab-signup>a:hover {
     background-color: red !important;
     color: black !important;
+}
+
+.login-cart {
+    margin: auto 5%;
+}
+
+.login-cart a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin: 1em;
+}
+
+.login-cart ul a {
+    font-size: 12px;
+}
+
+.login-cart {
+    position: relative;
+}
+
+.usermenu {
+    position: fixed;
+    right: 0;
+    top: 25px;
+    width: 200px;
+    background-color: #0b0c10;
+    display: none;
+    z-index: 10;
+}
+
+.usermenu:is(:hover, :focus),
+.login-cart>a:nth-child(1):is(:hover, :focus, :active)~.usermenu {
+    display: block;
 }
