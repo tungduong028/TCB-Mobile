@@ -70,12 +70,12 @@
 		</div>
 
 		<div class="login-layout">
-			<form class="form-login" onsubmit="login()">
+			<form class="form-login" onsubmit="formLogin()">
 				<a id="close-login-layout" href="#" style="color: red;">X</a>
 				<h1 class="form-heading">Đăng Nhập Tài Khoản TCB</h1>
 				<div class="form-group">
-					<input type="text" id="usernamelogin" placeholder="Tên đăng nhập">
-					<input type="password" id="passwordlogin" placeholder="Mật Khẩu">
+					<input type="text" id="usernamelogin" placeholder="Tên đăng nhập" required>
+					<input type="password" id="passwordlogin" placeholder="Mật Khẩu" required>
 					<p><a href="#">Quên mật khẩu?</a></p>
 					<input type="submit" value="Đăng Nhập" id="submit">
 				</div>
@@ -85,7 +85,7 @@
 		</div>
 
 		<div class="sign-up-layout">
-			<form class="form-signup" onsubmit="setSignup()">
+			<form class="form-signup" onsubmit="formRegister()">
 				<div class="tab-signup">
 					<a id="close-signup-layout" href="#" style="color: white"><i
 							class="fa-sharp fa-solid fa-circle-xmark"></i></a>
@@ -95,11 +95,11 @@
 				</div>
 				<h1 class="form-heading">Đăng Ký Tài Khoản TCB</h1>
 				<div class="signup-group">
-					<input type="text" id="username" placeholder="Nhập Tên Đăng Nhập">
-					<input type="email" id="email" placeholder="Nhập Địa Chỉ Mail">
-					<input type="tel" id="phone" placeholder="Nhập Số Điện Thoại">
-					<input type="password" id="password" placeholder="Nhập Mật Khẩu Của Bạn">
-					<input type="password" id="confirmpass" placeholder="Xác nhận Mật Khẩu">
+					<input type="text" id="username" placeholder="Nhập Tên Đăng Nhập" required>
+					<input type="email" id="email" placeholder="Nhập Địa Chỉ Mail" required>
+					<input type="tel" id="phone" placeholder="Nhập Số Điện Thoại" required>
+					<input type="password" id="password" placeholder="Nhập Mật Khẩu Của Bạn" required>
+					<input type="password" id="confirmpass" placeholder="Xác nhận Mật Khẩu" required>
 					<input type="submit" value="Đăng Ký" id="submit">
 				</div>
 				<div class="form-question">Bạn đã có tài khoản?<a href="#" id="comeback-login"
@@ -164,7 +164,7 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-	<script src="/JS-TCB/jsTCB.js"></script>
+	<script type="module" src="/JS-TCB/jsTCB.js"></script>
 	<script type="module" src="/JS-TCB/DienThoai.js"></script>
 	<script type="module" src="/JS-TCB/Laptop.js"></script>
 	<script type="module" src="/JS-TCB/MayTinhBang.js"></script>
