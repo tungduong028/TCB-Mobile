@@ -3,6 +3,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
 	<link rel="stylesheet" href="/Css-TCB/Style-TrangChu.css">
+	<link rel="stylesheet" href="/Css-TCB/DanhsachSP.css">
 	<link rel="stylesheet" href="/Css-TCB/login.css">
 	<title>TCB mobile</title>
 </head>
@@ -87,31 +88,47 @@
 		</div>
 
 		<div class="main">
-			<div class="content">
-				<div class="titlecont">Điện thoại</div>
-				<ul id="products">
-				</ul>
+			<div id="Phanloai">
+				<ul class="menuPhanloai">
+					<li>Phân loại dòng sản phẩm
+						<ul class="sub-menu">
+							<li class="btnAll">Tất cả</li>
+							<li class="btnCoday">Tai nghe có dây</li>
+							<li class="btnBluetooth">Tai nghe Bluetooth</li>
+							<li class="btnLoa">Loa</li>
+						</ul>
+					</li>
+					<li>Khoảng giá sản phẩm
+						<ul class="sub-menu">
+							<li class="btnAll02">Tất cả</li>
+							<li class="btn1tr">Dưới 1.000.000</li>
+							<li class="btnMid">1.000.000 - 20.000.000</li>
+							<li class="btn20tr">Trên 20.000.000</li>
+						</ul>
+					</li>
+				</ul>	
 			</div>
-
-			<div class="content">
-				<div class="titlecont">laptop</div>
-				<ul id="products02">
-				</ul>
-			</div>
-
-			<div class="content">
-				<div class="titlecont">Máy tính bảng</div>
-				<ul id="products03">
-				</ul>
-			</div>
-
 			<div class="content">
 				<div class="titlecont">Âm thanh</div>
 				<ul id="products04">
 				</ul>
 			</div>
 		</div>
-
+		<div class="page">
+			<ul>
+				<li class="btn-prev btnA btn-active fas fa-angle-left"></li>
+				<div class="number-page" id="number-page">
+					<!-- <li class="active">
+					<a>1</a>
+				</li>
+				<li>
+					<a>2</a>
+				</li> -->
+				</div>
+				<li class="btn-next btnA fas fa-angle-right"></li>
+			</ul>
+		</div>
+		
 		<div class="footer">
 			<div class="mail">
 				<div class="txt-mail">Đăng kí nhận tin:</div>
@@ -142,11 +159,7 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-	<script type="module" src="/JS-TCB/jsPhantrang.js"></script>
 	<script type="module" src="/JS-TCB/jsTCB.js"></script>
-	<script type="module" src="/JS-TCB/DienThoai.js"></script>
-	<script type="module" src="/JS-TCB/Laptop.js"></script>
-	<script type="module" src="/JS-TCB/MayTinhBang.js"></script>
 	<script type="module" src="/JS-TCB/AmThanh.js"></script>
 </body>
 

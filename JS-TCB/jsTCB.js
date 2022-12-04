@@ -46,11 +46,10 @@ signupButton.addEventListener('click', () => {
 	toggleActive(signupLayout)
 })
 
-//tìm kiếm sản phẩm
+//Tìm kiếm sản phẩm
 function renderProduct() {
     let html = '';
     const content = products.map((item, index) => {
-        // if (index >= start && index < end) {
             html += `
                 <li>
                     <img class="C-Slide" src=${item.image}>
@@ -62,12 +61,11 @@ function renderProduct() {
                     </div>
                 </li>
             `
-        // }
     })
     document.getElementById('searchProduct').innerHTML = html;
 }
 var input = document.getElementById("search");
-function myFunction() {
+function SearchProducts() {
     renderProduct();
 	var filter, ul, li, a, i;
 	filter = input.value.toUpperCase();
@@ -87,20 +85,8 @@ function myFunction() {
 	  }
 	}
 }
-input.addEventListener("keyup", myFunction);
+input.addEventListener("keyup", SearchProducts);
 //---------------------------------------------
-let perPage = 8;
-let currentPage = 1;
-let start = 0;
-let end = perPage;
-const totalPages = 2;
-const btnNext = document.querySelector('.btn-next');
-const btnPrev = document.querySelector('.btn-prev');
-
-function getCurrentPage(currentPage) {
-	start = (currentPage - 1) * perPage;
-	end = currentPage * perPage;
-}
 
 //Slide-gioithieu
 var kichthuoc = document.getElementsByClassName("slide")[0].clientWidth;

@@ -91,6 +91,7 @@ a {
 
     .menu {
         margin: 8em 0.5em;
+        margin-top: 11em;
         z-index: 100;
     }
 
@@ -131,30 +132,12 @@ a {
         color: aqua;
     }
 
-    .menu .sub-menu {
-        position: absolute;
-        top: 0;
-        left: 8.7em;
-        display: none;
-    }
-
-    .menu .sub-menu li {
-        width: 6.6em;
-    }
-
-    .menu .sub-menu li:hover {
-        background-color: #c89979;
-    }
-
-    .menu li:hover .sub-menu {
-        display: block;
-    }
-
     .slide {
         width: 25em;
         height: 10em;
         overflow: hidden;
         margin: 9em auto;
+        margin-top: 12.5em;
         border-radius: 1em;
     }
 
@@ -171,7 +154,7 @@ a {
 
     .next-prev {
         position: absolute;
-        top: 11em;
+        top: 16em;
         color: gainsboro;
         width: 25em;
     }
@@ -189,8 +172,8 @@ a {
         width: 15em;
         overflow: scroll;
         position: absolute;
-        top: 4em;
-        height: 20em;
+        top: 6.3em;
+        height: 17.6em;
         padding: 0;
         margin: 0;
     }
@@ -261,10 +244,6 @@ a {
         border: 1px solid black;
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
-    }
-
-    .content ul li:nth-child(n+7) {
-        display: none;
     }
 
     .content ul li a {
@@ -486,25 +465,6 @@ a {
         color: aqua;
     }
 
-    .menu .sub-menu {
-        position: absolute;
-        top: 0;
-        left: 10.7em;
-        display: none;
-    }
-
-    .menu .sub-menu li {
-        width: 8.6em;
-    }
-
-    .menu .sub-menu li:hover {
-        background-color: #c89979;
-    }
-
-    .menu li:hover .sub-menu {
-        display: block;
-    }
-
     .slide {
         width: 40em;
         height: 20em;
@@ -545,7 +505,7 @@ a {
         overflow: scroll;
         position: absolute;
         top: 4em;
-        height: 20em;
+        height: 17.6em;
         padding: 0;
         margin: 0;
     }
@@ -613,10 +573,6 @@ a {
         border: 1px solid black;
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em dimgray;
-    }
-
-    .content ul li:nth-child(n+7) {
-        display: none;
     }
 
     .content ul li a {
@@ -842,25 +798,6 @@ a {
         color: aqua;
     }
 
-    .menu .sub-menu {
-        position: absolute;
-        top: 0;
-        left: 11em;
-        display: none;
-    }
-
-    .menu .sub-menu li {
-        width: 12.6em;
-    }
-
-    .menu .sub-menu li:hover {
-        background-color: #c89979;
-    }
-
-    .menu li:hover .sub-menu {
-        display: block;
-    }
-
     .slide {
         width: 75em;
         height: 20em;
@@ -898,13 +835,13 @@ a {
     #searchProduct{
         width: 29em;
         overflow: scroll;
-        height: 20em;
+        height: 17.6em;
         padding: 0;
         margin: 0;
     }
-    #searchProduct::-webkit-scrollbar {
+    /* #searchProduct::-webkit-scrollbar {
         display: none;
-    }
+    } */
     #searchProduct li{
         width: 27em;
         margin: 0.5em;

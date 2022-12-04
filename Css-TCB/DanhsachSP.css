@@ -1,0 +1,199 @@
+.page{
+    margin-top: -10em;
+}
+.page ul {
+    margin: 0 auto;
+    display:flex;
+    width: 6em;
+    padding:0;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.page ul .btnA{
+    font-size: 40px;
+    margin-top: 14px;
+    margin-left: -0.9em;
+}
+.number-page{
+    display: flex;
+}
+.number-page li{
+    padding: 1em;
+    margin: 0 1em;
+    margin-left: -1.4em;
+}
+.number-page li a{
+    font-size: 35px;
+}
+@media all and (max-width: 600px) {
+
+    #Phanloai {
+        margin: 1em;
+    }
+
+    .menuPhanloai {
+        width: 28em;
+        margin: 0 auto;
+        padding: 0;
+        border: 2px solid #0B0C10;
+        border-bottom: none;
+        border-radius: 5px;
+        box-shadow: 0.3em 0.3em gainsboro;
+        list-style: none;
+        display: flex;
+    }
+
+    .menuPhanloai li {
+        width: 14em;
+        position: relative;
+        font-size: 17px;
+        padding: 0.5em 0.5em;
+        text-align: center;
+        color: white;
+        z-index: 100;
+        border-bottom: 2px solid #0B0C10;
+        background-color: #0B0C10;
+        cursor: pointer;
+    }
+
+    .menuPhanloai li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai .sub-menu {
+        position: absolute;
+        top: 2.2em;
+        left: -2.4em;
+        display: none;
+
+    }
+
+    .menuPhanloai .sub-menu li {
+        width: 11.5em;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .menuPhanloai .sub-menu li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai li:hover .sub-menu {
+        display: block;
+    }
+}
+
+@media all and (min-width: 600px) {
+    #Phanloai {
+        margin: 1em;
+    }
+
+    .menuPhanloai {
+        width: 50em;
+        margin: 0 auto;
+        padding: 0;
+        border: 2px solid #0B0C10;
+        border-bottom: none;
+        border-radius: 5px;
+        box-shadow: 0.3em 0.3em gainsboro;
+        list-style: none;
+        display: flex;
+    }
+
+    .menuPhanloai li {
+        width: 25em;
+        position: relative;
+        font-size: 22px;
+        padding: 0.5em 0.5em;
+        text-align: center;
+        color: white;
+        z-index: 100;
+        border-bottom: 2px solid #0B0C10;
+        background-color: #0B0C10;
+        cursor: pointer;
+    }
+
+    .menuPhanloai li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai .sub-menu {
+        position: absolute;
+        top: 2.2em;
+        left: -2em;
+        display: none;
+
+    }
+
+    .menuPhanloai .sub-menu li {
+        width: 16.2em;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .menuPhanloai .sub-menu li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai li:hover .sub-menu {
+        display: block;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #Phanloai {
+        margin: 1em;
+    }
+
+    .menuPhanloai {
+        width: 75em;
+        margin: 0 auto;
+        padding: 0;
+        border: 2px solid #0B0C10;
+        border-bottom: none;
+        border-radius: 5px;
+        box-shadow: 0.3em 0.3em gainsboro;
+        list-style: none;
+        display: flex;
+    }
+
+    .menuPhanloai li {
+        width: 37.5em;
+        position: relative;
+        font-size: 22px;
+        padding: 0.5em 0.5em;
+        text-align: center;
+        color: white;
+        z-index: 100;
+        border-bottom: 2px solid #0B0C10;
+        background-color: #0B0C10;
+        cursor: pointer;
+    }
+
+    .menuPhanloai li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai .sub-menu {
+        position: absolute;
+        top: 2.2em;
+        left: -2em;
+        display: none;
+
+    }
+
+    .menuPhanloai .sub-menu li {
+        width: 24.7em;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .menuPhanloai .sub-menu li:hover {
+        background-color: dimgrey;
+    }
+
+    .menuPhanloai li:hover .sub-menu {
+        display: block;
+    }
+
+}
