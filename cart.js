@@ -77,6 +77,7 @@ const productTemplate = (product) => {
             </td>
             <td>${product.p + ' VND'}</td>
             <td>${(parseInt(product.p.replace(/[^0-9]/g, '')) * product.quantity).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</td>
+            <td><i id = "trash" class="fa-solid fa-trash"></i></td>
         </tr>
     `
 }

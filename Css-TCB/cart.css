@@ -20,6 +20,12 @@
     border: 1px solid black;
     text-align: center
 }
-
+#trash {
+    color: darkgray;
+    cursor: pointer;
+}
+#trash:hover {
+    color: red;
+}
 
 
