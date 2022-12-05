@@ -1,14 +1,14 @@
 import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
-
-products = products.filter(product => product.category == 'dienthoai')
+let listSanpham = products
+listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
 
 let perPage = 8;
 let currentPage = 1;
 let start = 0;
 let end = perPage;
-const totalPages = Math.ceil(products.length / perPage);
+const totalPages = 3;
 
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
@@ -22,9 +22,12 @@ const btnMid = document.querySelector('.btnMid');
 const btn20tr = document.querySelector('.btn20tr');
 
 //Show sản phẩm điện thoại
-function renderProduct(products) {
+listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+
+function renderProduct(listSanpham) {
+    listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
     let html = '';
-    const content = products.map((item, index) => {
+    const content = listSanpham.map((item, index) => {
         if (index >= start && index < end) {
             html += `
                 <li>
@@ -41,7 +44,7 @@ function renderProduct(products) {
     })
     document.getElementById('products').innerHTML = html;
 }
-renderProduct(products);
+renderProduct(listSanpham);
 
 //---------------------Phân loại sản phẩm-----------------------
 //Theo dòng sản phẩm
@@ -113,7 +116,7 @@ btnNext.addEventListener('click', () => {
         currentPage = totalPages;
     }
     getCurrentPage(currentPage);
-    renderProduct(products);
+    renderProduct(listSanpham);
 })
 //Nút trang trước
 btnPrev.addEventListener('click', () => {
@@ -122,7 +125,7 @@ btnPrev.addEventListener('click', () => {
         currentPage = 1;
     }
     getCurrentPage(currentPage);
-    renderProduct(products);
+    renderProduct(listSanpham);
 })
 
 //Các nút số trang
