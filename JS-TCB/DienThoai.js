@@ -2,14 +2,15 @@ import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
 let listSanpham = products
+localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
+listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
 listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
 
 let perPage = 8;
 let currentPage = 1;
 let start = 0;
 let end = perPage;
-const totalPages = 3;
-
+const totalPages = Math.ceil(listSanpham.length / perPage);
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const btnAll = document.querySelector('.btnAll');
@@ -22,10 +23,9 @@ const btnMid = document.querySelector('.btnMid');
 const btn20tr = document.querySelector('.btn20tr');
 
 //Show sản phẩm điện thoại
-listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
 
 function renderProduct(listSanpham) {
-    listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
+    
     let html = '';
     const content = listSanpham.map((item, index) => {
         if (index >= start && index < end) {
@@ -49,10 +49,10 @@ renderProduct(listSanpham);
 //---------------------Phân loại sản phẩm-----------------------
 //Theo dòng sản phẩm
 btnAll.addEventListener('click', () => {
-    renderProduct(products);
+    renderProduct(listSanpham);
 })
 //Phân loại điện thoại Iphone
-const iphone = products.filter((item, index) => {
+const iphone = listSanpham.filter((item, index) => {
     return item.subcategory == 'iphone'
 })
 btnIphone.addEventListener('click', () => {
@@ -60,7 +60,7 @@ btnIphone.addEventListener('click', () => {
 })
 
 //Phân loại điện thoại Samsung
-const samsung = products.filter((item, index) => {
+const samsung = listSanpham.filter((item, index) => {
     return item.subcategory == 'samsung'
 })
 btnSamsung.addEventListener('click', () => {
@@ -68,7 +68,7 @@ btnSamsung.addEventListener('click', () => {
 })
 
 //Phân loại điện thoại Xiaomi
-const xiaomi = products.filter((item, index) => {
+const xiaomi = listSanpham.filter((item, index) => {
     return item.subcategory == 'xiaomi'
 })
 btnXiaomi.addEventListener('click', () => {
@@ -77,10 +77,10 @@ btnXiaomi.addEventListener('click', () => {
 
 //Theo giá sản phẩm
 btnAll02.addEventListener('click', () => {
-    renderProduct(products);
+    renderProduct(listSanpham);
 })
 //Phân loại giá dưới 1 triệu
-const duoi1tr = products.filter((item, index) => {
+const duoi1tr = listSanpham.filter((item, index) => {
     return item.subprice == 'duoi1tr'
 })
 btn1tr.addEventListener('click', () => {
@@ -88,14 +88,14 @@ btn1tr.addEventListener('click', () => {
 })
 
 //Phân loại giá 1.000.000 - 20.000.000
-const mid = products.filter((item, index) => {
+const mid = listSanpham.filter((item, index) => {
     return item.subprice == 'mid'
 })
 btnMid.addEventListener('click', () => {
     renderProduct(mid);
 })
 
-const tren20tr = products.filter((item, index) => {
+const tren20tr = listSanpham.filter((item, index) => {
     return item.subprice == 'tren20tr'
 })
 btn20tr.addEventListener('click', () => {
@@ -117,7 +117,9 @@ btnNext.addEventListener('click', () => {
     }
     getCurrentPage(currentPage);
     renderProduct(listSanpham);
+    
 })
+
 //Nút trang trước
 btnPrev.addEventListener('click', () => {
     currentPage--;
@@ -126,6 +128,7 @@ btnPrev.addEventListener('click', () => {
     }
     getCurrentPage(currentPage);
     renderProduct(listSanpham);
+    
 })
 
 //Các nút số trang
@@ -150,7 +153,7 @@ function changePage() {
             let value = i + 1;
             currentPage = value;
             getCurrentPage(currentPage);
-            renderProduct(products);
+            renderProduct(listSanpham);
         })
     }
 }
