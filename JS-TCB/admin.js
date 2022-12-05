@@ -2,29 +2,12 @@ import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
 let listSanpham = products
-function validataInput(){
-    let formElement = document.querySelector(".from")
-    let inputElement = formElement.querySelectorAll(".form-input")
-    for(let i = 0; i < inputElement.length; i++){
-        if(inputElement[i].value == ""){
-            inputElement[i].parentElement.querySelector(".errorMess").innerText = 'hãy nhập đầy đủ thông tin'
-        }else{
-            inputElement[i].parentElement.querySelector(".errorMess").innerText = ""
-        }
-    }
-}
+localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
+listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+window.onload = renderProduct()
 
-
-function addNew(){
-    validataInput()
-    let formElement = document.querySelector(".from")
-    let errorElement = formElement.querySelectorAll(".errorMess")
-    let arrError = []
-    for(let i = 0;i < arrError.length; i++){
-        arrError.push(arrError[i].innerText)
-    }
-    let checkError = arrError.every(value => value === "")
-    if(checkError){
+function addNew() {
+    
         let id = document.getElementById("id").value
         let image = document.getElementById("image").value
         let title = document.getElementById("title").value
@@ -34,8 +17,6 @@ function addNew(){
         let category = document.getElementById("category").value
         let subcategory = document.getElementById("subcategory").value
         let subprice = document.getElementById("subprice").value
-        let listSanpham = products
-        listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
         listSanpham.push({
             id: id,
             image: image,
@@ -48,10 +29,37 @@ function addNew(){
             subprice: subprice
         })
         localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
-    }
+        listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+        renderProduct();
+    
 }
 
+function renderProduct() {
+    listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+    let html = ''
+    listSanpham.map((value, index) => {
+        html += `<tr class="table_row">
+            <td>${value.id}</td>
+            <td>${value.image}</td>
+            <td>${value.title}</td>
+            <td>${value.p}</td>
+            <td>${value.description}</td>
+            <td>${value.paragraph}</td>
+            <td>${value.category}</td>
+            <td>${value.subcategory}</td>
+            <td>${value.subprice}</td>
+            <td><button class="btn btn-warning" id="btnEdit" onclick="editProducts(${index})">Edit</button></td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>`
+    })
+    document.getElementById('result').innerHTML = html;
+}
+function editProducts(index){
+    console.log(index)
+}
 const btnadd = document.getElementById("btnadd")
-btnadd.addEventListener('click', () => {
+btnadd.addEventListener('click',() =>{
     addNew();
 })
+
+

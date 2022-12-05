@@ -2,9 +2,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+	<link rel="stylesheet" href="/Css-TCB/Style-TrangChu.css">
 	<link rel="stylesheet" href="/Css-TCB/admin.css">
-	<link rel="stylesheet" href="/Css-TCB/login.css">
-	<title>TCB mobile</title>
+	<title>TCB mobile - Admin</title>
 </head>
 
 <body>
@@ -13,73 +13,104 @@
 			<div class="header-top">
 				<img src="/images/Logo/LOGO-TCB.png" class="logo">
 				<form action="" class="search-box">
-					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="">
+					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="search()">
 					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-					<ul id="searchProduct">
-
-					</ul>
+					<div id="searchProduct"></div>
 				</form>
 				<div class="login-cart">
-					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
-					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Admin</a>
+					<a style="display: none" id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="main">
-            <div class="container">
-                <div class="from">
-                    <div class="input-information">
-                        <label for="">ID</label>
-                        <input type="text" id="id" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">URL Image</label>
-                        <input type="text" id="image" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Title</label>
-                        <input type="text" id="title" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Price</label>
-                        <input type="text" id="p" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Description</label>
-                        <input type="text" id="description" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Paragraph</label>
-                        <input type="text" id="paragraph" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Category</label>
-                        <input type="text" id="category" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                    <div class="input-information">
-                        <label for="">Sub-category</label>
-                        <input type="text" id="subcategory" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-					<div class="input-information">
-                        <label for="">subprice</label>
-                        <input type="text" id="subprice" class="form-input">
-						<div class="errorMess"></div>
-                    </div>
-                        <button id="btnadd">Submit</button>
-                </div>
-				<ul id="products">
+			<div class="panel">
+				<div class="panel-heading">
+					Input product detail information
+				</div>
+				<div class="panel-body">
+					<form class="from" method="post" style="margin-block-end: 0;">
+						<div class="form-group">
+							<label for="">Product ID</label>
+							<input class="form-control" type="text" name="product_id" id="id" placeholder="Enter product id" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Product Image</label>
+							<input class="form-control" type="text" name="product_img" id="image" placeholder="Enter image address" autocomplete="off">
+							<div class="errorMess"></div>
 
-				</ul>
-            </div>
+						</div>
+						<div class="form-group">
+							<label for="">Name</label>
+							<input class="form-control" type="text" name="product_name" id="title" placeholder="Enter product name" autocomplete="off">
+							<div class="errorMess"></div>
+
+						</div>
+						<div class="form-group">
+							<label for="">Price</label>
+							<input class="form-control" type="text" name="price" id="p" placeholder="Enter price" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Description</label>
+							<input class="form-control" type="text" name="product_description" id="description" placeholder="Enter description" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Paragraph</label>
+							<input class="form-control" type="text" name="paragraph" id="paragraph" placeholder="Enter paragraph" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Category</label>
+							<input class="form-control" type="text" name="category" id="category" placeholder="Enter category" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Sub-category</label>
+							<input class="form-control" type="text" name="subcategory" id="subcategory" placeholder="Enter subcategory" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<label for="">Subprice</label>
+							<input class="form-control" type="text" name="subprice" id="subprice" placeholder="Enter subprice" autocomplete="off">
+							<div class="errorMess"></div>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success" id="btnadd" type="button" >Add Product</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="panel">
+				<div class="panel-heading">
+					Product List
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Image</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Description</th>
+								<th>Paragraph</th>
+								<th class="th7_8">Category</th>
+								<th class="th7_8">Sub-category</th>
+								<th>Subprice</th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="result">
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 
 		<div class="footer">
@@ -113,6 +144,6 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 	<script type="module" src="/JS-TCB/admin.js"></script>
+	
 </body>
-
 </html>
