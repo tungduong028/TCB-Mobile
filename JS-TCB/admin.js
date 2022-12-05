@@ -55,26 +55,3 @@ const btnadd = document.getElementById("btnadd")
 btnadd.addEventListener('click', () => {
     addNew();
 })
-listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
-listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
-function renderProduct(listSanpham) {
-    
-    let html = '';
-    const content = listSanpham.map((item, index) => {
-        // if (index >= start && index < end) {
-            html += `
-                <li>
-                    <img class="C-Slide" src=${item.image}>
-                    <div class="info">
-                    <div class="name-info">
-                        <a href="/sanpham.html?id=${item.id}"> ${item.title} </a>
-                    </div>
-                    <div class="cost">${item.p}</div>
-                    </div>
-                </li>
-            `
-        // }
-    })
-    document.getElementById('products').innerHTML = html;
-}
-renderProduct(listSanpham);
