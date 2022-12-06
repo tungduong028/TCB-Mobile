@@ -1,9 +1,11 @@
 import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
+products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-product")) : []
 window.onload = renderProduct()
 
 function addNew() {
+    
         let id = document.getElementById("id").value
         let image = document.getElementById("image").value
         let title = document.getElementById("title").value
@@ -49,6 +51,7 @@ function renderProduct() {
     })
     document.getElementById('result').innerHTML = html;
 }
+
 function resetInput(){
     document.getElementById("id").value = ""
     document.getElementById("image").value = ""
@@ -60,6 +63,7 @@ function resetInput(){
     document.getElementById("subcategory").value = ""
     document.getElementById("subprice").value = ""
 }
+
 function editProducts(index){
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     document.getElementById("id").value = products[index].id
@@ -103,7 +107,6 @@ const btnadd = document.getElementById("btnadd")
 btnadd.addEventListener('click',() =>{
     addNew();
 })
-
 window.editProducts = editProducts
 window.changeProduct = changeProduct
 window.deleteProducts = deleteProducts

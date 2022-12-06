@@ -1,7 +1,14 @@
+.wrapper {
+    width: 80%;
+    border: 5px solid black;
+}
 .cart {
     margin-top: 120px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20;
 }
 
 .cart table {
@@ -26,6 +33,32 @@
 }
 #trash:hover {
     color: red;
+}
+
+.total {
+    position: absolute;
+    right: 170px;
+    font-size: 20px;
+    color: red;
+}
+.cart-actions button {
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 20px;;
+}
+.cart-actions button:hover {
+    background-color: red;
+    transition: all 0.2s linear;
+    color: aliceblue;
+}
+.cart input {
+    text-align: center;
+    border-color: white;
+}
+.cart input:hover {
+    border-color: red;
 }
 
 

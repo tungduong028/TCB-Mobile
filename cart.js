@@ -11,6 +11,11 @@ const getCart = () => {
     return cart
 }
 
+
+const getTotalPrice = () => {
+    return getCart().reduce((previousValue, currentValue) => previousValue + (parseInt(currentValue.p.replace(/[^0-9]/g, '')) * currentValue.quantity), 0)
+}
+
 const addProductToCart = (product) => {
     let cart = getCart()
     cart = cart.filter(value => value.id != product.id)
@@ -27,7 +32,9 @@ const addProductToCart = (product) => {
 
 const removeProductFromCart = (productId) => {
     let cart = getCart()
-    cart = cart.filter(value => value.id != product.id)
+    console.log(cart)
+    cart = cart.filter(value => value.id != productId)
+    console.log(cart)
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 
@@ -35,12 +42,12 @@ const updateProductQuantityInCart = (productId, quantity) => {
     let cart = getCart()
     let alreadyProduct = cart.find(value => value.id == productId)
     cart = cart.filter(value => value.id != productId)
-    console.log(cart)
     if (!alreadyProduct) {
         return false
     }
     alreadyProduct.quantity = quantity
     cart.push(alreadyProduct)
+    cart.sort((a, b) => a.id - b.id)
     localStorage.setItem('cart', JSON.stringify(cart))
     return true
 }
@@ -65,7 +72,6 @@ const productTemplate = (product) => {
             <td>${product.id}</td>
             <td> <img src="${product.image}" style="max-height:50px;" ></td>
             <td>${product.title}</td>
-            <!-- <td>${product.quantity}</td> -->
             <td>
                 <input
                 type="number"
@@ -77,9 +83,17 @@ const productTemplate = (product) => {
             </td>
             <td>${product.p + ' VND'}</td>
             <td>${(parseInt(product.p.replace(/[^0-9]/g, '')) * product.quantity).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</td>
-            <td><i id = "trash" class="fa-solid fa-trash"></i></td>
+            <td><a
+                onclick="removeProductFromCart(${product.id})"
+            ><i id = "trash" class="fa-solid fa-trash"></i></a></td>
         </tr>
     `
+}
+
+window.removeProductFromCart = (productId) => {
+    removeProductFromCart(productId)
+    render()
+    location.reload()
 }
 
 const changeQuantityProduct = (productId, quantity) => {
@@ -87,9 +101,29 @@ const changeQuantityProduct = (productId, quantity) => {
     render()
 }
 window.changeQuantityProduct = changeQuantityProduct
+
+window.payment = () => {
+    if (confirm('Bạn có muốn thanh toán không ?')) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        alert('Thanh toán thành công !')
+        window.location.href = "TrangChu.html"
+    }
+}
+
+window.removeCart = () => {
+    if (confirm('Bạn có muốn xóa giỏ hàng không ?')) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        alert('Đã xóa giỏ hàng!')
+        location.reload()
+    }
+}
+
+
 const render = () => {
     const productCart = document.querySelector('.cart tbody')
     productCart.innerHTML = getCart().reduce((previousValue, currentValue) => { return previousValue + productTemplate(currentValue) }, "")
+    const totalMoney = document.querySelector('#total-money')
+    totalMoney.textContent = getTotalPrice()
 }
 export {
     getCart,
