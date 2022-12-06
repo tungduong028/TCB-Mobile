@@ -1,40 +1,43 @@
 import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
-
+let listSanpham = products
+localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
+listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
 window.onload = renderProduct()
 
 function addNew() {
-    let id = document.getElementById("id").value
-    let image = document.getElementById("image").value
-    let title = document.getElementById("title").value
-    let p = document.getElementById("p").value
-    let description = document.getElementById("description").value
-    let paragraph = document.getElementById("paragraph").value
-    let category = document.getElementById("category").value
-    let subcategory = document.getElementById("subcategory").value
-    let subprice = document.getElementById("subprice").value
-    products.push({
-        id: id,
-        image: image,
-        title: title,
-        p: p,
-        description: description,
-        paragraph: paragraph,
-        category: category,
-        subcategory: subcategory,
-        subprice: subprice
-    })
-    localStorage.setItem("list-products", JSON.stringify(products))
-    products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
-    renderProduct();
-
+    
+        let id = document.getElementById("id").value
+        let image = document.getElementById("image").value
+        let title = document.getElementById("title").value
+        let p = document.getElementById("p").value
+        let description = document.getElementById("description").value
+        let paragraph = document.getElementById("paragraph").value
+        let category = document.getElementById("category").value
+        let subcategory = document.getElementById("subcategory").value
+        let subprice = document.getElementById("subprice").value
+        listSanpham.push({
+            id: id,
+            image: image,
+            title: title,
+            p: p,
+            description: description,
+            paragraph: paragraph,
+            category: category,
+            subcategory: subcategory,
+            subprice: subprice
+        })
+        localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
+        listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+        renderProduct();
+    
 }
 
 function renderProduct() {
-    products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
+    listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
     let html = ''
-    products.map((value, index) => {
+    listSanpham.map((value, index) => {
         html += `<tr class="table_row">
             <td>${value.id}</td>
             <td>${value.image}</td>
@@ -51,12 +54,11 @@ function renderProduct() {
     })
     document.getElementById('result').innerHTML = html;
 }
-
-function editProducts(index) {
+function editProducts(index){
     console.log(index)
 }
 const btnadd = document.getElementById("btnadd")
-btnadd.addEventListener('click', () => {
+btnadd.addEventListener('click',() =>{
     addNew();
 })
 

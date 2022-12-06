@@ -86,18 +86,9 @@ const productTemplate = (product) => {
             <td><a
                 onclick="removeProductFromCart(${product.id})"
             ><i id = "trash" class="fa-solid fa-trash"></i></a></td>
-            <!-- ${getTotalPrice()} -->
         </tr>
     `
 }
-
-// const productotal = () => {
-//     return `
-//         <div>
-//             ${getTotalPrice()}
-//         </div>
-//      `
-// }
 
 window.removeProductFromCart = (productId) => {
     removeProductFromCart(productId)
@@ -110,22 +101,23 @@ const changeQuantityProduct = (productId, quantity) => {
     render()
 }
 window.changeQuantityProduct = changeQuantityProduct
+
+window.payment = () => {
+    if (confirm('Bạn có muốn thanh toán không ?')) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        alert('Thanh toán thành công !')
+        window.location.href = "TrangChu.html"
+    }
+}
+
 window.removeCart = () => {
-    if (confirm("Bạn có muốn xóa giỏ hàng không ?")) {
+    if (confirm('Bạn có muốn xóa giỏ hàng không ?')) {
         localStorage.setItem('cart', JSON.stringify([]))
         alert('Đã xóa giỏ hàng!')
         location.reload()
     }
 }
 
-window.payment = () => {
-    if (confirm('Bạn có muốn thanh toán không ?')) {
-        // function payment
-        localStorage.setItem('cart', JSON.stringify([]))
-        alert('Thanh toán thành công !')
-        location.reload()
-    }
-}
 
 const render = () => {
     const productCart = document.querySelector('.cart tbody')

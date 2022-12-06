@@ -61,12 +61,12 @@
                     </div>
                 </tbody>
             </table>
-            <div class="cart-actions" onclick="removeCart()">
-                <!-- clear -->
-                <button>Xóa giỏ hàng</button>
-                <div> Tổng tiền: <a id="total-money"></a> VNĐ</div>
-                <!-- payment -->
-                <button onclick="payment()">Thanh toán</button>
+            <div class="cart-actions">
+                <div class="total"> Tổng tiền: <a id="total-money"></a> VNĐ</div>
+                <div>
+                    <button  onclick="removeCart()">Xóa giỏ hàng</button>
+                    <button onclick="payment()">Thanh toán</button>
+                </div>
             </div>
         </div>
     </div>
