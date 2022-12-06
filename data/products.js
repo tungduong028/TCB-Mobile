@@ -617,9 +617,10 @@ let products = [
     }
 ]
 
-const getProducts = () => {
-    return { products }
-}
-export {
-    getProducts
-}
+// const getProducts = () => {
+//     return { products }
+// }
+// export {
+//     getProducts
+// }
+

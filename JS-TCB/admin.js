@@ -1,13 +1,10 @@
-import { getProducts } from '../data/products.js    '
+// import { getProducts } from '../data/products.js    '
 
-let { products } = getProducts()
-let listSanpham = products
-localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
-listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+// let { products } = getProducts()
+
 window.onload = renderProduct()
 
 function addNew() {
-    
         let id = document.getElementById("id").value
         let image = document.getElementById("image").value
         let title = document.getElementById("title").value
@@ -17,7 +14,7 @@ function addNew() {
         let category = document.getElementById("category").value
         let subcategory = document.getElementById("subcategory").value
         let subprice = document.getElementById("subprice").value
-        listSanpham.push({
+        products.push({
             id: id,
             image: image,
             title: title,
@@ -28,16 +25,16 @@ function addNew() {
             subcategory: subcategory,
             subprice: subprice
         })
-        localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
-        listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+        localStorage.setItem("list-products", JSON.stringify(products))
+        products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
         renderProduct();
     
 }
 
 function renderProduct() {
-    listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
+    products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     let html = ''
-    listSanpham.map((value, index) => {
+    products.map((value, index) => {
         html += `<tr class="table_row">
             <td>${value.id}</td>
             <td>${value.image}</td>
@@ -61,5 +58,7 @@ const btnadd = document.getElementById("btnadd")
 btnadd.addEventListener('click',() =>{
     addNew();
 })
+
+
 
 

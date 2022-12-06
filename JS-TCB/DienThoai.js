@@ -1,16 +1,15 @@
-import { getProducts } from '../data/products.js    '
+// import { getProducts } from '../data/products.js    '
 
-let { products } = getProducts()
-let listSanpham = products
-localStorage.setItem("list-Sanpham", JSON.stringify(listSanpham))
-listSanpham = localStorage.getItem("list-Sanpham") ? JSON.parse(localStorage.getItem("list-Sanpham")) : []
-listSanpham = listSanpham.filter(listSanpham => listSanpham.category == 'dienthoai')
+// let { products } = getProducts()
+// let listSanpham = products
+products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
+products = products.filter(products => products.category == 'dienthoai')
 
 let perPage = 8;
 let currentPage = 1;
 let start = 0;
 let end = perPage;
-const totalPages = Math.ceil(listSanpham.length / perPage);
+const totalPages = Math.ceil(products.length / perPage);
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const btnAll = document.querySelector('.btnAll');
@@ -24,10 +23,10 @@ const btn20tr = document.querySelector('.btn20tr');
 
 //Show sản phẩm điện thoại
 
-function renderProduct(listSanpham) {
+function renderProduct(products) {
     
     let html = '';
-    const content = listSanpham.map((item, index) => {
+    const content = products.map((item, index) => {
         if (index >= start && index < end) {
             html += `
                 <li>
@@ -44,15 +43,15 @@ function renderProduct(listSanpham) {
     })
     document.getElementById('products').innerHTML = html;
 }
-renderProduct(listSanpham);
+renderProduct(products);
 
 //---------------------Phân loại sản phẩm-----------------------
 //Theo dòng sản phẩm
 btnAll.addEventListener('click', () => {
-    renderProduct(listSanpham);
+    renderProduct(products);
 })
 //Phân loại điện thoại Iphone
-const iphone = listSanpham.filter((item, index) => {
+const iphone = products.filter((item, index) => {
     return item.subcategory == 'iphone'
 })
 btnIphone.addEventListener('click', () => {
@@ -60,7 +59,7 @@ btnIphone.addEventListener('click', () => {
 })
 
 //Phân loại điện thoại Samsung
-const samsung = listSanpham.filter((item, index) => {
+const samsung = products.filter((item, index) => {
     return item.subcategory == 'samsung'
 })
 btnSamsung.addEventListener('click', () => {
@@ -68,7 +67,7 @@ btnSamsung.addEventListener('click', () => {
 })
 
 //Phân loại điện thoại Xiaomi
-const xiaomi = listSanpham.filter((item, index) => {
+const xiaomi = products.filter((item, index) => {
     return item.subcategory == 'xiaomi'
 })
 btnXiaomi.addEventListener('click', () => {
@@ -77,10 +76,10 @@ btnXiaomi.addEventListener('click', () => {
 
 //Theo giá sản phẩm
 btnAll02.addEventListener('click', () => {
-    renderProduct(listSanpham);
+    renderProduct(products);
 })
 //Phân loại giá dưới 1 triệu
-const duoi1tr = listSanpham.filter((item, index) => {
+const duoi1tr = products.filter((item, index) => {
     return item.subprice == 'duoi1tr'
 })
 btn1tr.addEventListener('click', () => {
@@ -88,14 +87,14 @@ btn1tr.addEventListener('click', () => {
 })
 
 //Phân loại giá 1.000.000 - 20.000.000
-const mid = listSanpham.filter((item, index) => {
+const mid = products.filter((item, index) => {
     return item.subprice == 'mid'
 })
 btnMid.addEventListener('click', () => {
     renderProduct(mid);
 })
 
-const tren20tr = listSanpham.filter((item, index) => {
+const tren20tr = products.filter((item, index) => {
     return item.subprice == 'tren20tr'
 })
 btn20tr.addEventListener('click', () => {
@@ -116,7 +115,7 @@ btnNext.addEventListener('click', () => {
         currentPage = totalPages;
     }
     getCurrentPage(currentPage);
-    renderProduct(listSanpham);
+    renderProduct(products);
     
 })
 
@@ -127,7 +126,7 @@ btnPrev.addEventListener('click', () => {
         currentPage = 1;
     }
     getCurrentPage(currentPage);
-    renderProduct(listSanpham);
+    renderProduct(products);
     
 })
 
@@ -153,7 +152,7 @@ function changePage() {
             let value = i + 1;
             currentPage = value;
             getCurrentPage(currentPage);
-            renderProduct(listSanpham);
+            renderProduct(products);
         })
     }
 }
