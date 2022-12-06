@@ -72,27 +72,22 @@ function editProducts(index){
     document.getElementById("subcategory").value = products[index].subcategory
     document.getElementById("subprice").value = products[index].subprice
     document.getElementById("index").value = index
-    document.getElementById("save").style.display = "none"
-    document.getElementById("update").style.display = "inline-block"
-
 }
 function changeProduct(){
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     let index = document.getElementById("index").value
     products[index] = {
         id: document.getElementById("id").value,
-            image: document.getElementById("image"),
-            title: document.getElementById("title"),
-            p: document.getElementById("p"),
-            description: document.getElementById("description"),
-            paragraph: document.getElementById("paragraph"),
-            category: document.getElementById("category"),
-            subcategory: document.getElementById("subcategory"),
-            subprice: document.getElementById("subprice")
+        image: document.getElementById("image").value,
+        title: document.getElementById("title").value,
+        p: document.getElementById("p").value,
+        description: document.getElementById("description").value,
+        paragraph: document.getElementById("paragraph").value,
+        category: document.getElementById("category").value,
+        subcategory: document.getElementById("subcategory").value,
+        subprice: document.getElementById("subprice").value
     }
     localStorage.setItem("list-products", JSON.stringify(products))
-    document.getElementById("save").style.display = "inline-block"
-    document.getElementById("update").style.display = "none"
     renderProduct()
     resetInput()
 }
@@ -110,4 +105,5 @@ btnadd.addEventListener('click',() =>{
 })
 
 window.editProducts = editProducts
+window.changeProduct = changeProduct
 window.deleteProducts = deleteProducts

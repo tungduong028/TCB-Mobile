@@ -1,7 +1,6 @@
 import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
-localStorage.setItem("list-products", JSON.stringify(products))
 
 products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
 products = products.filter(products => products.category == 'dienthoai')

@@ -1,7 +1,7 @@
 import { getProducts } from '../data/products.js    '
 
 let { products } = getProducts()
-
+products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
 products = products.filter (product => product.category == 'amthanh')
 
 let perPage = 8;
