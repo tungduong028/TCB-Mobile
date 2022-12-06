@@ -12,6 +12,20 @@
     overflow: hidden;
     height: 50px;
 }
-
+.cart td {
+    border: 1px solid black;
+    text-align: center
+}
+.cart th {
+    border: 1px solid black;
+    text-align: center
+}
+#trash {
+    color: darkgray;
+    cursor: pointer;
+}
+#trash:hover {
+    color: red;
+}
 
 

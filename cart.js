@@ -33,8 +33,9 @@ const removeProductFromCart = (productId) => {
 
 const updateProductQuantityInCart = (productId, quantity) => {
     let cart = getCart()
+    let alreadyProduct = cart.find(value => value.id == productId)
     cart = cart.filter(value => value.id != productId)
-    let alreadyProduct = product.find(value => value.id == product.id)
+    console.log(cart)
     if (!alreadyProduct) {
         return false
     }
@@ -64,16 +65,31 @@ const productTemplate = (product) => {
             <td>${product.id}</td>
             <td> <img src="${product.image}" style="max-height:50px;" ></td>
             <td>${product.title}</td>
-            <td>${product.quantity}</td>
+            <!-- <td>${product.quantity}</td> -->
+            <td>
+                <input
+                type="number"
+                value="${product.quantity}"
+                min = 1
+                max = 100000
+                onchange = "changeQuantityProduct(${product.id},this.value)"
+                >
+            </td>
             <td>${product.p + ' VND'}</td>
             <td>${(parseInt(product.p.replace(/[^0-9]/g, '')) * product.quantity).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</td>
+            <td><i id = "trash" class="fa-solid fa-trash"></i></td>
         </tr>
     `
 }
 
+const changeQuantityProduct = (productId, quantity) => {
+    updateProductQuantityInCart(productId, quantity)
+    render()
+}
+window.changeQuantityProduct = changeQuantityProduct
 const render = () => {
     const productCart = document.querySelector('.cart tbody')
-    productCart.innerHTML += getCart().reduce((previousValue, currentValue) => { return previousValue + productTemplate(currentValue) }, "")
+    productCart.innerHTML = getCart().reduce((previousValue, currentValue) => { return previousValue + productTemplate(currentValue) }, "")
 }
 export {
     getCart,

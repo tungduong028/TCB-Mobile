@@ -61,7 +61,7 @@ const formRegister = (e) => {
         "password": password
     }
     if (register(account)) {
-        alert("Thành công đăng ký !")
+        alert("Đăng ký thành công !")
     } else {
         alert("Đăng ký thất bại!")
     }

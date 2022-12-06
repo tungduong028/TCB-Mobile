@@ -3,31 +3,36 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
-	<link rel="stylesheet" href="/Css-TCB/Style-ChiTietSanPham.css">
-	<link rel="stylesheet" href="/Css-TCB/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Css-TCB/Style-ChiTietSanPham.css">
+    <link rel="stylesheet" href="/Css-TCB/login.css">
     <link rel="stylesheet" href="/Css-TCB/cart.css">
-    
     <title>TCB mobile - Giỏ hàng</title>
 </head>
 
 <body>
     <div id="wrapper">
         <div id="header">
-			<div class="header-top">
-				<img src="/images/Logo/LOGO-TCB.png" class="logo">
-				<form action="" class="search-box">
-					<input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text" id="search" oninput="">
-					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-					<ul id="searchProduct">
-					</ul>
-				</form>
-				<div class="login-cart">
-					<a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
-					<a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
-				</div>
-			</div>
-		</div>
+            <div class="header-top">
+                <a class="logo" href="/TrangChu.html">
+                    <img src="/images/Logo/LOGO-TCB.png">
+                </a>
+                <form action="" class="search-box">
+                    <input type="text" placeholder="Bạn muốn tìm gì ?" autocomplete="off" class="search-text"
+                        id="search" oninput="">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- <ul id="searchProduct">
+					</ul> -->
+                </form>
+                <div class="login-cart">
+                    <a id="login-button" href="#"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+                    <a id="signup-button" href="#"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+                </div>
+            </div>
+        </div>
         <div class="cart">
             <table>
                 <thead>
@@ -38,21 +43,25 @@
                         <th>Số lượng</th>
                         <th>Giá tiền</th>
                         <th>Tổng tiền</th>
+                        <th>Xóa</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr> -->
+                    <tr>
+                        <!-- <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td> -->
+                    </tr>
                 </tbody>
+                <div></div>
             </table>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script type="module" src="./sanpham.js"></script>
     <script type="module" src="./cart.js"></script>
 </body>
