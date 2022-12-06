@@ -623,4 +623,5 @@ const getProducts = () => {
 export {
     getProducts
 }
+// localStorage.setItem("list-products", JSON.stringify(products))
 
