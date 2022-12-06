@@ -1,6 +1,6 @@
-// import { getProducts } from '../data/products.js    '
+import { getProducts } from '../data/products.js    '
 
-// let { products } = getProducts()
+let { products } = getProducts()
 
 window.onload = renderProduct()
 
@@ -51,6 +51,7 @@ function renderProduct() {
     })
     document.getElementById('result').innerHTML = html;
 }
+
 function editProducts(index){
     console.log(index)
 }
