@@ -4,31 +4,32 @@ let { products } = getProducts()
 products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-product")) : []
 window.onload = renderProduct()
 
+
 //Thêm sản phẩm
 function addNew() {
-        let id = document.getElementById("id").value
-        let image = document.getElementById("image").value
-        let title = document.getElementById("title").value
-        let p = document.getElementById("p").value
-        let description = document.getElementById("description").value
-        let paragraph = document.getElementById("paragraph").value
-        let category = document.getElementById("category").value
-        let subcategory = document.getElementById("subcategory").value
-        let subprice = document.getElementById("subprice").value
-        products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
-        products.push({
-            id: id,
-            image: image,
-            title: title,
-            p: p,
-            description: description,
-            paragraph: paragraph,
-            category: category,
-            subcategory: subcategory,
-            subprice: subprice
-        })
-        localStorage.setItem("list-products", JSON.stringify(products))
-        renderProduct();
+    let id = document.getElementById("id").value
+    let image = document.getElementById("image").value
+    let title = document.getElementById("title").value
+    let p = document.getElementById("p").value
+    let description = document.getElementById("description").value
+    let paragraph = document.getElementById("paragraph").value
+    let category = document.getElementById("category").value
+    let subcategory = document.getElementById("subcategory").value
+    let subprice = document.getElementById("subprice").value
+    products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
+    products.push({
+        id: id,
+        image: image,
+        title: title,
+        p: p,
+        description: description,
+        paragraph: paragraph,
+        category: category,
+        subcategory: subcategory,
+        subprice: subprice
+    })
+    localStorage.setItem("list-products", JSON.stringify(products))
+    renderProduct();
 }
 
 //Show sản phẩm vào list
@@ -54,7 +55,7 @@ function renderProduct() {
 }
 
 //Reset các ô input sau khi xử lí chức năng
-function resetInput(){
+function resetInput() {
     document.getElementById("id").value = ""
     document.getElementById("image").value = ""
     document.getElementById("title").value = ""
@@ -67,7 +68,7 @@ function resetInput(){
 }
 
 //Lấy thông tin sản phẩm cần sửa
-function editProducts(index){
+function editProducts(index) {
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     document.getElementById("id").value = products[index].id
     document.getElementById("image").value = products[index].image
@@ -79,10 +80,14 @@ function editProducts(index){
     document.getElementById("subcategory").value = products[index].subcategory
     document.getElementById("subprice").value = products[index].subprice
     document.getElementById("index").value = index
+    window.scrollTo({
+        top: 0,
+        behavior: `smooth`
+    })
 }
 
 //Gán lại thông tin sau khi sửa cho sản phẩm
-function changeProduct(){
+function changeProduct() {
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     let index = document.getElementById("index").value
     products[index] = {
@@ -102,16 +107,16 @@ function changeProduct(){
 }
 
 //Xóa sản phẩm
-function deleteProducts(index){
+function deleteProducts(index) {
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
-    if(confirm("bạn có chắc muốn xóa ?")){
-        products.splice(index,1)
+    if (confirm("bạn có chắc muốn xóa ?")) {
+        products.splice(index, 1)
     }
     localStorage.setItem("list-products", JSON.stringify(products))
     renderProduct()
 }
 const btnadd = document.getElementById("btnadd")
-btnadd.addEventListener('click',() =>{
+btnadd.addEventListener('click', () => {
     addNew();
 })
 
