@@ -4,8 +4,8 @@ let { products } = getProducts()
 products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-product")) : []
 window.onload = renderProduct()
 
+//Thêm sản phẩm
 function addNew() {
-    
         let id = document.getElementById("id").value
         let image = document.getElementById("image").value
         let title = document.getElementById("title").value
@@ -31,6 +31,7 @@ function addNew() {
         renderProduct();
 }
 
+//Show sản phẩm vào list
 function renderProduct() {
     products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     let html = ''
@@ -52,6 +53,7 @@ function renderProduct() {
     document.getElementById('result').innerHTML = html;
 }
 
+//Reset các ô input sau khi xử lí chức năng
 function resetInput(){
     document.getElementById("id").value = ""
     document.getElementById("image").value = ""
@@ -64,6 +66,7 @@ function resetInput(){
     document.getElementById("subprice").value = ""
 }
 
+//Lấy thông tin sản phẩm cần sửa
 function editProducts(index){
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     document.getElementById("id").value = products[index].id
@@ -77,6 +80,8 @@ function editProducts(index){
     document.getElementById("subprice").value = products[index].subprice
     document.getElementById("index").value = index
 }
+
+//Gán lại thông tin sau khi sửa cho sản phẩm
 function changeProduct(){
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     let index = document.getElementById("index").value
@@ -95,6 +100,8 @@ function changeProduct(){
     renderProduct()
     resetInput()
 }
+
+//Xóa sản phẩm
 function deleteProducts(index){
     let products = localStorage.getItem("list-products") ? JSON.parse(localStorage.getItem("list-products")) : []
     if(confirm("bạn có chắc muốn xóa ?")){
@@ -107,6 +114,7 @@ const btnadd = document.getElementById("btnadd")
 btnadd.addEventListener('click',() =>{
     addNew();
 })
+
 window.editProducts = editProducts
 window.changeProduct = changeProduct
 window.deleteProducts = deleteProducts
