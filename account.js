@@ -101,12 +101,11 @@ const onloadShowMenuLogin = () => {
 
 const focusLogin = () => {
     if (getCurrentAccount().username) {
-        return
+        return true
     }
-    alert("Chức năng này cần đăng nhập !")
-    window.location.href = "TrangChu.html"
+    else
+        return false
 }
-
 export {
     getAccountList,
     getCurrentAccount,
@@ -119,3 +118,4 @@ export {
     onloadShowMenuLogin,
     focusLogin
 }
+

@@ -1,5 +1,6 @@
 import { getProducts } from './data/products.js'
 import { addProductToCart, getCart } from './cart.js'
+import { focusLogin } from './account.js'
 const productId = new URLSearchParams(window.location.search).get('id')
 
 let { products } = getProducts()
@@ -21,13 +22,24 @@ productDescription.innerText = product.description
 productParagraph.innerText = product.paragraph
 
 buttonAddToCard.addEventListener('click', () => {
-    console.log("bought")
-    addProductToCart(product)
-    console.log(getCart())
-    alert("Đã thêm vô giỏ hàng !")
+    if (focusLogin()== true) {
+        addProductToCart(product)
+        console.log(getCart())
+        alert("Đã thêm vô giỏ hàng !")
+    }
+    else {
+        alert("chức năng này cần đăng nhập")
+        window.location.href = "TrangChu.html"
+    }
 })
 
 buttonBuy.addEventListener('click', () => {
-    addProductToCart(product)
-    window.location.href = '/cart.html'
+    if (focusLogin() == true) {
+        addProductToCart(product)
+        window.location.href = '/cart.html'
+    }
+    else {
+        alert("chức năng này cần đăng nhập")
+        window.location.href = "TrangChu.html"
+    }
 })

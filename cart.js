@@ -11,7 +11,6 @@ const getCart = () => {
     return cart
 }
 
-
 const getTotalPrice = () => {
     return getCart().reduce((previousValue, currentValue) => previousValue + (parseInt(currentValue.p.replace(/[^0-9]/g, '')) * currentValue.quantity), 0)
 }
@@ -60,7 +59,7 @@ window.formLogin = formLogin
 window.logoutAccount = logoutAccount
 
 window.onload = () => {
-    focusLogin()
+
     onloadShowMenuLogin()
     console.log(getCart())
     render()
@@ -91,9 +90,11 @@ const productTemplate = (product) => {
 }
 
 window.removeProductFromCart = (productId) => {
-    removeProductFromCart(productId)
-    render()
-    location.reload()
+    if (confirm('Bạn muốn xóa sản phẩm này ?')) {
+        removeProductFromCart(productId)
+        render()
+        location.reload()
+    }
 }
 
 const changeQuantityProduct = (productId, quantity) => {
@@ -117,7 +118,6 @@ window.removeCart = () => {
         location.reload()
     }
 }
-
 
 const render = () => {
     const productCart = document.querySelector('.cart tbody')
