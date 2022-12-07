@@ -54,6 +54,10 @@ const formRegister = (e) => {
         alert("Mật khẩu xác nhận không khớp !")
         return false
     }
+    else if (username == 'admin') {
+        alert("Bạn không thể đăng kí với tên đăng nhập này !")
+        return false
+    }
     const account = {
         "username": username,
         "email": email,
@@ -73,7 +77,10 @@ const formLogin = () => {
     console.log(username, password)
     if (login(username, password)) {
         alert("Đăng nhập thành công!")
-        window.location.href = "TrangChu.html"
+        if (username == 'admin')
+            window.location.href = "admin.html"
+        else
+            window.location.href = "TrangChu.html"
     } else {
         alert("Đăng nhập thất bại !")
     }
