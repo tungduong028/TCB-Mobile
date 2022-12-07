@@ -38,7 +38,7 @@ function renderProduct() {
     products.map((value, index) => {
         html += `<tr class="table_row">
             <td>${value.id}</td>
-            <td>${value.image}</td>
+            <td><img src="${value.image}" style="max-height:50px;" ></td>
             <td>${value.title}</td>
             <td>${value.p}</td>
             <td>${value.description}</td>
