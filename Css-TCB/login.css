@@ -168,12 +168,34 @@ body {
     margin: auto 5%;
 }
 
-.login-cart a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    margin: 1em;
+@media all and (max-width: 600px) {
+    .login-cart a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 7px;
+        display: block;
+        margin: 1em;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .login-cart a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        margin: 1em;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .login-cart a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        margin: 1em;
+    }
 }
 
 .login-cart ul a {
