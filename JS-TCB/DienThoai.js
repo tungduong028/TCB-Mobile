@@ -136,8 +136,7 @@ btnPrev.addEventListener('click', () => {
 //Show các nút số trang
 function renderListPage(totalPages) {
     let html = '';
-    html += `<li class="current-page active"><a>${1}</a></li>`;
-    for (let i = 2; i <= totalPages; i++) {
+    for (let i = 1; i <= totalPages; i++) {
         html += `<li><a>${i}</a></li>`;
     }
     if (totalPages === 0) {
