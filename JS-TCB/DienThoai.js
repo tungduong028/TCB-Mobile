@@ -10,6 +10,7 @@ let currentPage = 1;
 let start = 0;
 let end = perPage;
 const totalPages = Math.ceil(products.length / perPage);
+
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const btnAll = document.querySelector('.btnAll');
@@ -94,6 +95,7 @@ btnMid.addEventListener('click', () => {
     renderProduct(mid);
 })
 
+//Phân loại giá trên 20tr
 const tren20tr = products.filter((item, index) => {
     return item.subprice == 'tren20tr'
 })
