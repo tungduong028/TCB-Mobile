@@ -623,5 +623,6 @@ const getProducts = () => {
 export {
     getProducts
 }
+//chạy 1 lần rồi // để lấy dữ liệu
 localStorage.setItem("list-products", JSON.stringify(products))
 
